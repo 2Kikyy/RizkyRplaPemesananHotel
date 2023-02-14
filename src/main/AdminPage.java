@@ -7,13 +7,18 @@ package main;
 
 import db.DBConnection;
 import java.awt.Font;
+import java.awt.event.ActionEvent;
 import java.awt.event.KeyEvent;
 import static java.awt.font.TextAttribute.FONT;
 import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.Statement;
+import javax.swing.AbstractAction;
+import javax.swing.Action;
+import javax.swing.JComponent;
 import javax.swing.JOptionPane;
+import javax.swing.KeyStroke;
 import javax.swing.table.DefaultTableModel;
 import javax.swing.table.JTableHeader;
 
@@ -49,6 +54,21 @@ public class AdminPage extends javax.swing.JFrame {
         
         // to set app's name
         this.setTitle("RizHotel v1.0");
+        
+        // shortcut to go search bar
+        Action searchAction = new AbstractAction("Search") {
+            public void actionPerformed(ActionEvent e) {
+                txtCariKamarD.requestFocus();
+                txtCariUmumD.requestFocus();
+            }
+        };
+        
+        String key = "Search";
+        txtCariKamarD.getInputMap(JComponent.WHEN_IN_FOCUSED_WINDOW).put(KeyStroke.getKeyStroke(KeyEvent.VK_SLASH, 0), key);
+        txtCariKamarD.getActionMap().put(key, searchAction);
+        
+        txtCariUmumD.getInputMap(JComponent.WHEN_IN_FOCUSED_WINDOW).put(KeyStroke.getKeyStroke(KeyEvent.VK_SLASH, 0), key);
+        txtCariUmumD.getActionMap().put(key, searchAction);
     }
 
     public void tampilkanFasilitasKamar() {
@@ -190,12 +210,9 @@ public class AdminPage extends javax.swing.JFrame {
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
+        jTabbedPane1.setFont(new java.awt.Font("Verdana", 1, 14)); // NOI18N
+
         jPanel1.setBackground(new java.awt.Color(255, 255, 255));
-        jPanel1.addMouseMotionListener(new java.awt.event.MouseMotionAdapter() {
-            public void mouseMoved(java.awt.event.MouseEvent evt) {
-                jPanel1MouseMoved(evt);
-            }
-        });
         jPanel1.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
                 jPanel1MouseClicked(evt);
@@ -387,7 +404,7 @@ public class AdminPage extends javax.swing.JFrame {
                 .addGap(308, 308, 308))
         );
 
-        jTabbedPane1.addTab("Data Failitas Kamar", jPanel1);
+        jTabbedPane1.addTab("Data Fasilitas Kamar", jPanel1);
 
         jPanel2.setBackground(new java.awt.Color(255, 255, 255));
         jPanel2.addMouseListener(new java.awt.event.MouseAdapter() {
@@ -777,10 +794,6 @@ public class AdminPage extends javax.swing.JFrame {
             tampilkanFasilitasUmum();
         }
     }//GEN-LAST:event_txtCariUmumDKeyPressed
-
-    private void jPanel1MouseMoved(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jPanel1MouseMoved
-        // TODO add your handling code here:
-    }//GEN-LAST:event_jPanel1MouseMoved
 
     /**
      * @param args the command line arguments

@@ -6,13 +6,18 @@
 package main;
 
 import db.DBConnection;
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
 import java.awt.event.KeyEvent;
 import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.Statement;
+import javax.swing.AbstractButton;
 import static javax.swing.JComponent.WHEN_IN_FOCUSED_WINDOW;
+import javax.swing.JFrame;
 import javax.swing.JOptionPane;
+import javax.swing.JPanel;
 import javax.swing.table.DefaultTableModel;
 
 /**
@@ -28,17 +33,6 @@ public class ResepsionisPage extends javax.swing.JFrame {
     PreparedStatement pstm;
         
     DefaultTableModel ModelTbl;
-    
-    //set shortcut pencarian
-    //jPanel1.getInputMap(WHEN_IN_FOCUSED_WINDOW).put(KeyEvent.VK_SLASH, txtKolomCari.requestFocus());
-
-    public ResepsionisPage() {
-        initComponents();
-        tampilDataKeReservasi();
-        
-        // to set app's name
-        this.setTitle("RizHotel v1.0");
-    }
 
     public ResepsionisPage(String username, String levelMysql) {
         initComponents();
@@ -52,6 +46,8 @@ public class ResepsionisPage extends javax.swing.JFrame {
         String level = levelMysql;
         labelLevel.setText(level);
         
+        // to set app's name
+        this.setTitle("RizHotel v1.0");
     }
 
     public void tampilDataKeReservasi() {
@@ -135,13 +131,6 @@ public class ResepsionisPage extends javax.swing.JFrame {
         addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
                 formMouseClicked(evt);
-            }
-        });
-        addWindowFocusListener(new java.awt.event.WindowFocusListener() {
-            public void windowGainedFocus(java.awt.event.WindowEvent evt) {
-                formWindowGainedFocus(evt);
-            }
-            public void windowLostFocus(java.awt.event.WindowEvent evt) {
             }
         });
 
@@ -308,10 +297,6 @@ public class ResepsionisPage extends javax.swing.JFrame {
         }
     }//GEN-LAST:event_txtKolomCariKeyPressed
 
-    private void formWindowGainedFocus(java.awt.event.WindowEvent evt) {//GEN-FIRST:event_formWindowGainedFocus
-        // TODO add your handling code here:
-    }//GEN-LAST:event_formWindowGainedFocus
-
     /**
      * @param args the command line arguments
      */
@@ -343,7 +328,7 @@ public class ResepsionisPage extends javax.swing.JFrame {
         /* Create and display the form */
         java.awt.EventQueue.invokeLater(new Runnable() {
             public void run() {
-                new ResepsionisPage().setVisible(true);
+                new ResepsionisPage("", "").setVisible(true);
             }
         });
     }

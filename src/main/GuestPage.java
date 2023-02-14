@@ -7,11 +7,16 @@ package main;
 
 import db.DBConnection;
 import java.awt.Font;
+import java.awt.Graphics;
+import java.awt.Graphics2D;
 import java.awt.HeadlessException;
 import java.awt.Toolkit;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.awt.event.KeyEvent;
+import java.awt.print.PageFormat;
+import java.awt.print.Printable;
+import java.awt.print.PrinterJob;
 import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
@@ -170,7 +175,7 @@ public class GuestPage extends javax.swing.JFrame {
         return txtTtlHargaD.getText();
     }
 
-    public void cetakBuktiPemesanan() {
+    public void setBuktiPemesananTabel() {
         data[0] = noPemesanD.getText();
         data[1] = txtNamaPemesanD.getText();
         data[2] = txtEmailD.getText();
@@ -307,6 +312,53 @@ public class GuestPage extends javax.swing.JFrame {
         });
 
     }
+    
+    public void printPdfBuktiPemesanan() {
+        // this is will print at pemesanan's tab
+        PrinterJob print = PrinterJob.getPrinterJob();
+        print.setJobName("Cetak Data Pemesanan");
+        
+        print.setPrintable(new Printable() {
+            public int print(Graphics pg, PageFormat pf, int pageNum) {
+                pf.setOrientation(PageFormat.PORTRAIT);
+                if(pageNum > 0) {
+                    return Printable.NO_SUCH_PAGE;
+                }
+                
+                Graphics2D g2 = (Graphics2D)pg;
+                g2.translate(pf.getImageableX(), pf.getImageableY());
+                g2.scale(0.60,0.60);
+                
+                jPanel2.print(g2);
+                
+                return Printable.PAGE_EXISTS;
+            }
+        });
+        
+        boolean ok = print.printDialog();
+        if(ok) {
+            try{
+                print.print();
+            } catch(Exception e) {
+                
+            }
+        }
+    }
+    
+    public void printPdfBuktiPemesananTabel() {
+        // this is will print at bukti pemesanan's tab
+        MessageFormat header = new MessageFormat("Bukti Reservasi Anda"); // set title
+        MessageFormat footer = new MessageFormat("By RizHotel"); // set footer
+        try {
+            PrintRequestAttributeSet set = new HashPrintRequestAttributeSet();
+            set.add(OrientationRequested.PORTRAIT);
+            tabelBuktiPemesanan.print(JTable.PrintMode.FIT_WIDTH, header, footer, true, set, true);
+            JOptionPane.showMessageDialog(null, "\n" + "Printed Successfully");
+        } catch (Exception e) {
+            System.err.println(e);
+            JOptionPane.showMessageDialog(null, "Error!", "Error", JOptionPane.INFORMATION_MESSAGE);
+        }
+    }
 
     public void bersihkanBuktiPemesanan() {
         txtNamaPemesanD.setText(uname);
@@ -405,6 +457,8 @@ public class GuestPage extends javax.swing.JFrame {
         );
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+
+        jTabbedPane1.setFont(new java.awt.Font("Verdana", 1, 13)); // NOI18N
 
         jPanel1.setBackground(new java.awt.Color(255, 255, 255));
         jPanel1.addMouseListener(new java.awt.event.MouseAdapter() {
@@ -628,54 +682,9 @@ public class GuestPage extends javax.swing.JFrame {
         jLabel17.setText("Tipe Kamar");
 
         comboBoxTipeKamar.setFont(new java.awt.Font("Tahoma", 0, 15)); // NOI18N
-        comboBoxTipeKamar.addItemListener(new java.awt.event.ItemListener() {
-            public void itemStateChanged(java.awt.event.ItemEvent evt) {
-                comboBoxTipeKamarItemStateChanged(evt);
-            }
-        });
         comboBoxTipeKamar.addFocusListener(new java.awt.event.FocusAdapter() {
             public void focusLost(java.awt.event.FocusEvent evt) {
                 comboBoxTipeKamarFocusLost(evt);
-            }
-        });
-        comboBoxTipeKamar.addMouseListener(new java.awt.event.MouseAdapter() {
-            public void mouseClicked(java.awt.event.MouseEvent evt) {
-                comboBoxTipeKamarMouseClicked(evt);
-            }
-            public void mouseEntered(java.awt.event.MouseEvent evt) {
-                comboBoxTipeKamarMouseEntered(evt);
-            }
-            public void mouseExited(java.awt.event.MouseEvent evt) {
-                comboBoxTipeKamarMouseExited(evt);
-            }
-            public void mousePressed(java.awt.event.MouseEvent evt) {
-                comboBoxTipeKamarMousePressed(evt);
-            }
-            public void mouseReleased(java.awt.event.MouseEvent evt) {
-                comboBoxTipeKamarMouseReleased(evt);
-            }
-        });
-        comboBoxTipeKamar.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                comboBoxTipeKamarActionPerformed(evt);
-            }
-        });
-        comboBoxTipeKamar.addPropertyChangeListener(new java.beans.PropertyChangeListener() {
-            public void propertyChange(java.beans.PropertyChangeEvent evt) {
-                comboBoxTipeKamarPropertyChange(evt);
-            }
-        });
-        comboBoxTipeKamar.addKeyListener(new java.awt.event.KeyAdapter() {
-            public void keyPressed(java.awt.event.KeyEvent evt) {
-                comboBoxTipeKamarKeyPressed(evt);
-            }
-            public void keyReleased(java.awt.event.KeyEvent evt) {
-                comboBoxTipeKamarKeyReleased(evt);
-            }
-        });
-        comboBoxTipeKamar.addVetoableChangeListener(new java.beans.VetoableChangeListener() {
-            public void vetoableChange(java.beans.PropertyChangeEvent evt)throws java.beans.PropertyVetoException {
-                comboBoxTipeKamarVetoableChange(evt);
             }
         });
 
@@ -1049,7 +1058,7 @@ public class GuestPage extends javax.swing.JFrame {
             .addGroup(jPanel7Layout.createSequentialGroup()
                 .addGap(46, 46, 46)
                 .addComponent(jButton2, javax.swing.GroupLayout.PREFERRED_SIZE, 34, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(1368, Short.MAX_VALUE))
+                .addContainerGap(1365, Short.MAX_VALUE))
         );
 
         jTabbedPane1.addTab("Kembali Login", jPanel7);
@@ -1090,7 +1099,7 @@ public class GuestPage extends javax.swing.JFrame {
                 pstm.execute();
                 JOptionPane.showMessageDialog(null, "Pemesanan Berhasil!");
                 jTabbedPane1.setSelectedIndex(2);
-                cetakBuktiPemesanan();
+                setBuktiPemesananTabel();
             } catch (HeadlessException | SQLException e) {
                 System.err.println(e);
                 JOptionPane.showMessageDialog(null, "Error!", "Error", JOptionPane.ERROR_MESSAGE);
@@ -1102,53 +1111,9 @@ public class GuestPage extends javax.swing.JFrame {
         hitungTotalBayar();
     }//GEN-LAST:event_txtCheckOutDFocusLost
 
-    private void comboBoxTipeKamarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_comboBoxTipeKamarActionPerformed
-
-    }//GEN-LAST:event_comboBoxTipeKamarActionPerformed
-
-    private void comboBoxTipeKamarMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_comboBoxTipeKamarMouseClicked
-
-    }//GEN-LAST:event_comboBoxTipeKamarMouseClicked
-
-    private void comboBoxTipeKamarMouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_comboBoxTipeKamarMouseExited
-
-    }//GEN-LAST:event_comboBoxTipeKamarMouseExited
-
-    private void comboBoxTipeKamarMouseReleased(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_comboBoxTipeKamarMouseReleased
-
-    }//GEN-LAST:event_comboBoxTipeKamarMouseReleased
-
-    private void comboBoxTipeKamarMouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_comboBoxTipeKamarMouseEntered
-
-    }//GEN-LAST:event_comboBoxTipeKamarMouseEntered
-
-    private void comboBoxTipeKamarMousePressed(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_comboBoxTipeKamarMousePressed
-
-    }//GEN-LAST:event_comboBoxTipeKamarMousePressed
-
-    private void comboBoxTipeKamarItemStateChanged(java.awt.event.ItemEvent evt) {//GEN-FIRST:event_comboBoxTipeKamarItemStateChanged
-
-    }//GEN-LAST:event_comboBoxTipeKamarItemStateChanged
-
-    private void comboBoxTipeKamarPropertyChange(java.beans.PropertyChangeEvent evt) {//GEN-FIRST:event_comboBoxTipeKamarPropertyChange
-
-    }//GEN-LAST:event_comboBoxTipeKamarPropertyChange
-
-    private void comboBoxTipeKamarVetoableChange(java.beans.PropertyChangeEvent evt)throws java.beans.PropertyVetoException {//GEN-FIRST:event_comboBoxTipeKamarVetoableChange
-
-    }//GEN-LAST:event_comboBoxTipeKamarVetoableChange
-
     private void comboBoxTipeKamarFocusLost(java.awt.event.FocusEvent evt) {//GEN-FIRST:event_comboBoxTipeKamarFocusLost
         hargaKamar();
     }//GEN-LAST:event_comboBoxTipeKamarFocusLost
-
-    private void comboBoxTipeKamarKeyPressed(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_comboBoxTipeKamarKeyPressed
-
-    }//GEN-LAST:event_comboBoxTipeKamarKeyPressed
-
-    private void comboBoxTipeKamarKeyReleased(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_comboBoxTipeKamarKeyReleased
-
-    }//GEN-LAST:event_comboBoxTipeKamarKeyReleased
 
     private void btnKeluarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnKeluarActionPerformed
         dispose();
@@ -1163,17 +1128,7 @@ public class GuestPage extends javax.swing.JFrame {
     }//GEN-LAST:event_btnKeluar3ActionPerformed
 
     private void btnCetakActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnCetakActionPerformed
-        MessageFormat header = new MessageFormat("Bukti Reservasi Anda"); // set title
-        MessageFormat footer = new MessageFormat("By RizHotel"); // set footer
-        try {
-            PrintRequestAttributeSet set = new HashPrintRequestAttributeSet();
-            set.add(OrientationRequested.PORTRAIT);
-            tabelBuktiPemesanan.print(JTable.PrintMode.FIT_WIDTH, header, footer, true, set, true);
-            JOptionPane.showMessageDialog(null, "\n" + "Printed Successfully");
-        } catch (Exception e) {
-            System.err.println(e);
-            JOptionPane.showMessageDialog(null, "Error!", "Error", JOptionPane.INFORMATION_MESSAGE);
-        }
+        printPdfBuktiPemesanan();
     }//GEN-LAST:event_btnCetakActionPerformed
 
     private void jPanel1MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jPanel1MouseClicked
