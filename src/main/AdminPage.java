@@ -205,6 +205,8 @@ public class AdminPage extends javax.swing.JFrame {
         txtFasilitasUmumD = new javax.swing.JTextField();
         txtWelcome1 = new javax.swing.JLabel();
         txtWelcomee2 = new javax.swing.JLabel();
+        jPanel4 = new javax.swing.JPanel();
+        jButton2 = new javax.swing.JButton();
         jPanel3 = new javax.swing.JPanel();
         jButton1 = new javax.swing.JButton();
 
@@ -589,6 +591,37 @@ public class AdminPage extends javax.swing.JFrame {
 
         jTabbedPane1.addTab("Data Fasilitas Umum", jPanel2);
 
+        jPanel4.setBackground(new java.awt.Color(255, 255, 255));
+
+        jButton2.setBackground(new java.awt.Color(28, 68, 138));
+        jButton2.setFont(new java.awt.Font("Segoe UI", 1, 15)); // NOI18N
+        jButton2.setForeground(new java.awt.Color(255, 255, 255));
+        jButton2.setText("About Page");
+        jButton2.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton2ActionPerformed(evt);
+            }
+        });
+
+        javax.swing.GroupLayout jPanel4Layout = new javax.swing.GroupLayout(jPanel4);
+        jPanel4.setLayout(jPanel4Layout);
+        jPanel4Layout.setHorizontalGroup(
+            jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanel4Layout.createSequentialGroup()
+                .addGap(369, 369, 369)
+                .addComponent(jButton2, javax.swing.GroupLayout.PREFERRED_SIZE, 129, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(568, Short.MAX_VALUE))
+        );
+        jPanel4Layout.setVerticalGroup(
+            jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanel4Layout.createSequentialGroup()
+                .addGap(63, 63, 63)
+                .addComponent(jButton2, javax.swing.GroupLayout.PREFERRED_SIZE, 49, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(826, Short.MAX_VALUE))
+        );
+
+        jTabbedPane1.addTab("About", jPanel4);
+
         jPanel3.setBackground(new java.awt.Color(255, 255, 255));
 
         jButton1.setBackground(new java.awt.Color(255, 0, 0));
@@ -811,6 +844,12 @@ public class AdminPage extends javax.swing.JFrame {
         }
     }//GEN-LAST:event_txtCariUmumDKeyPressed
 
+    private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
+        AboutPage about = new AboutPage();
+        about.setVisible(true);
+        setVisible(false);
+    }//GEN-LAST:event_jButton2ActionPerformed
+
     /**
      * @param args the command line arguments
      */
@@ -856,6 +895,7 @@ public class AdminPage extends javax.swing.JFrame {
     private javax.swing.JButton btnTambahKamarD;
     private javax.swing.JButton btnTambahUmumD;
     private javax.swing.JButton jButton1;
+    private javax.swing.JButton jButton2;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
@@ -867,6 +907,7 @@ public class AdminPage extends javax.swing.JFrame {
     private javax.swing.JPanel jPanel1;
     private javax.swing.JPanel jPanel2;
     private javax.swing.JPanel jPanel3;
+    private javax.swing.JPanel jPanel4;
     private javax.swing.JProgressBar jProgressBar1;
     private javax.swing.JScrollPane jScrollPane1;
     private javax.swing.JScrollPane jScrollPane2;
