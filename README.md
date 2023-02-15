@@ -1,3 +1,3 @@
 # RizkyRplaPemesananHotel
 
-This is a project for my secondary school in final year that be finished from middle January to middle February 2023
+This is a simple project for my final year secondary school that be finished from middle January to middle February 2023
