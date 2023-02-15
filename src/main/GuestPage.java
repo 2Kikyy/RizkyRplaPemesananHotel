@@ -144,7 +144,8 @@ public class GuestPage extends javax.swing.JFrame {
             long lama2 = TimeUnit.MILLISECONDS.toDays(lama);
             hariPenginapanV = String.valueOf(lama2);
         } catch (Exception e) {
-//            JOptionPane.showMessageDialog(rootPane, "Masukkan tanggal sesuai format!\nContoh: 22/02/2022");
+            System.err.println(e);
+            JOptionPane.showMessageDialog(rootPane, "Masukkan tanggal sesuai format!\nContoh: 22/02/2022");
         }
 
         return hariPenginapanV;
