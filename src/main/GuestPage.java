@@ -82,8 +82,6 @@ public class GuestPage extends javax.swing.JFrame {
 
         this.uname = username;
         txtWelcome1.setText(uname);
-        txtWelcome5.setText(uname);
-        txtWelcome3.setText(uname);
 
         // to set app's name
         this.setTitle("RizHotel v1.0");
@@ -417,22 +415,18 @@ public class GuestPage extends javax.swing.JFrame {
         hargaKamarDipilih = new javax.swing.JTextField();
         jLabel23 = new javax.swing.JLabel();
         jLabel9 = new javax.swing.JLabel();
-        txtWelcome2 = new javax.swing.JLabel();
-        txtWelcome5 = new javax.swing.JLabel();
         btnKonfirmasiPesanan = new javax.swing.JButton();
         jButton1 = new javax.swing.JButton();
         btnKeluar2 = new javax.swing.JButton();
         jButton3 = new javax.swing.JButton();
         jScrollPane3 = new javax.swing.JScrollPane();
         jPanel3 = new javax.swing.JPanel();
-        jLabel11 = new javax.swing.JLabel();
         jScrollPane4 = new javax.swing.JScrollPane();
         tabelBuktiPemesanan = new javax.swing.JTable();
         btnCetak = new javax.swing.JButton();
         btnKeluar3 = new javax.swing.JButton();
         txtwelcome1 = new javax.swing.JLabel();
         txtWelcome4 = new javax.swing.JLabel();
-        txtWelcome3 = new javax.swing.JLabel();
         jLabel13 = new javax.swing.JLabel();
         jLabel20 = new javax.swing.JLabel();
         jPanel7 = new javax.swing.JPanel();
@@ -810,12 +804,6 @@ public class GuestPage extends javax.swing.JFrame {
                 .addGap(15, 15, 15))
         );
 
-        txtWelcome2.setFont(new java.awt.Font("Segoe UI Semibold", 1, 22)); // NOI18N
-        txtWelcome2.setText("Selamat datang");
-
-        txtWelcome5.setFont(new java.awt.Font("Segoe UI Semibold", 1, 22)); // NOI18N
-        txtWelcome5.setText("username");
-
         btnKonfirmasiPesanan.setBackground(new java.awt.Color(0, 204, 0));
         btnKonfirmasiPesanan.setFont(new java.awt.Font("Segoe UI", 1, 15)); // NOI18N
         btnKonfirmasiPesanan.setText("Konfirmasi Pesanan");
@@ -861,33 +849,22 @@ public class GuestPage extends javax.swing.JFrame {
                         .addComponent(btnKeluar2))
                     .addGroup(jPanel2Layout.createSequentialGroup()
                         .addGap(20, 20, 20)
-                        .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel2Layout.createSequentialGroup()
-                                .addComponent(btnKonfirmasiPesanan, javax.swing.GroupLayout.PREFERRED_SIZE, 174, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                                .addComponent(jButton1, javax.swing.GroupLayout.PREFERRED_SIZE, 92, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addGap(290, 290, 290)
-                                .addComponent(jButton3, javax.swing.GroupLayout.PREFERRED_SIZE, 86, javax.swing.GroupLayout.PREFERRED_SIZE))
-                            .addGroup(jPanel2Layout.createSequentialGroup()
-                                .addGap(1, 1, 1)
-                                .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                    .addGroup(jPanel2Layout.createSequentialGroup()
-                                        .addComponent(txtWelcome2)
-                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                        .addComponent(txtWelcome5))
-                                    .addComponent(jPanel4, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))))))
-                .addContainerGap(2114, Short.MAX_VALUE))
+                        .addComponent(btnKonfirmasiPesanan, javax.swing.GroupLayout.PREFERRED_SIZE, 174, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(265, 265, 265)
+                        .addComponent(jButton1, javax.swing.GroupLayout.PREFERRED_SIZE, 92, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(290, 290, 290)
+                        .addComponent(jButton3, javax.swing.GroupLayout.PREFERRED_SIZE, 86, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addGroup(jPanel2Layout.createSequentialGroup()
+                        .addGap(29, 29, 29)
+                        .addComponent(jPanel4, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                .addContainerGap(2106, Short.MAX_VALUE))
         );
         jPanel2Layout.setVerticalGroup(
             jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel2Layout.createSequentialGroup()
-                .addGap(23, 23, 23)
-                .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(txtWelcome2)
-                    .addComponent(txtWelcome5))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addGap(27, 27, 27)
                 .addComponent(jPanel4, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(49, 49, 49)
+                .addGap(81, 81, 81)
                 .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(btnKonfirmasiPesanan, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(jButton1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
@@ -907,9 +884,6 @@ public class GuestPage extends javax.swing.JFrame {
                 jPanel3MouseClicked(evt);
             }
         });
-
-        jLabel11.setFont(new java.awt.Font("Segoe UI Semibold", 1, 22)); // NOI18N
-        jLabel11.setText("Selamat datang");
 
         tabelBuktiPemesanan.setFont(new java.awt.Font("Segoe UI Semibold", 0, 16)); // NOI18N
         tabelBuktiPemesanan.setModel(new javax.swing.table.DefaultTableModel(
@@ -960,9 +934,6 @@ public class GuestPage extends javax.swing.JFrame {
         txtWelcome4.setForeground(new java.awt.Color(235, 235, 235));
         txtWelcome4.setText("username");
 
-        txtWelcome3.setFont(new java.awt.Font("Segoe UI Semibold", 1, 22)); // NOI18N
-        txtWelcome3.setText("username");
-
         jLabel13.setFont(new java.awt.Font("Segoe UI Black", 0, 20)); // NOI18N
         jLabel13.setText("Bukti Reservasi");
 
@@ -980,19 +951,14 @@ public class GuestPage extends javax.swing.JFrame {
                         .addComponent(jLabel13))
                     .addGroup(jPanel3Layout.createSequentialGroup()
                         .addGap(30, 30, 30)
-                        .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                        .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
                             .addGroup(jPanel3Layout.createSequentialGroup()
-                                .addComponent(jLabel11)
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                .addComponent(txtWelcome3))
-                            .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
-                                .addGroup(jPanel3Layout.createSequentialGroup()
-                                    .addComponent(btnCetak, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                    .addGap(151, 151, 151)
-                                    .addComponent(jLabel20)
-                                    .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                                    .addComponent(btnKeluar3, javax.swing.GroupLayout.PREFERRED_SIZE, 86, javax.swing.GroupLayout.PREFERRED_SIZE))
-                                .addComponent(jScrollPane4, javax.swing.GroupLayout.PREFERRED_SIZE, 902, javax.swing.GroupLayout.PREFERRED_SIZE)))))
+                                .addComponent(btnCetak, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addGap(151, 151, 151)
+                                .addComponent(jLabel20)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                .addComponent(btnKeluar3, javax.swing.GroupLayout.PREFERRED_SIZE, 86, javax.swing.GroupLayout.PREFERRED_SIZE))
+                            .addComponent(jScrollPane4, javax.swing.GroupLayout.PREFERRED_SIZE, 902, javax.swing.GroupLayout.PREFERRED_SIZE))))
                 .addGap(2098, 2098, 2098))
             .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                 .addGroup(jPanel3Layout.createSequentialGroup()
@@ -1005,20 +971,16 @@ public class GuestPage extends javax.swing.JFrame {
         jPanel3Layout.setVerticalGroup(
             jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel3Layout.createSequentialGroup()
-                .addGap(19, 19, 19)
-                .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jLabel11)
-                    .addComponent(txtWelcome3))
-                .addGap(18, 18, 18)
+                .addContainerGap()
                 .addComponent(jLabel13)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(jScrollPane4, javax.swing.GroupLayout.PREFERRED_SIZE, 283, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(29, 29, 29)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(btnKeluar3, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(btnCetak, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(jLabel20))
-                .addGap(0, 2533, Short.MAX_VALUE))
+                .addContainerGap(2612, Short.MAX_VALUE))
             .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                 .addGroup(jPanel3Layout.createSequentialGroup()
                     .addGap(1034, 1034, 1034)
@@ -1215,7 +1177,6 @@ public class GuestPage extends javax.swing.JFrame {
     private javax.swing.JButton jButton3;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel10;
-    private javax.swing.JLabel jLabel11;
     private javax.swing.JLabel jLabel12;
     private javax.swing.JLabel jLabel13;
     private javax.swing.JLabel jLabel15;
@@ -1260,10 +1221,7 @@ public class GuestPage extends javax.swing.JFrame {
     private javax.swing.JTextField txtNoHPD;
     private javax.swing.JTextField txtTtlHargaD;
     private javax.swing.JLabel txtWelcome1;
-    private javax.swing.JLabel txtWelcome2;
-    private javax.swing.JLabel txtWelcome3;
     private javax.swing.JLabel txtWelcome4;
-    private javax.swing.JLabel txtWelcome5;
     private javax.swing.JLabel txtwelcome;
     private javax.swing.JLabel txtwelcome1;
     // End of variables declaration//GEN-END:variables
