@@ -67,21 +67,6 @@ public class GuestPage extends javax.swing.JFrame {
     /**
      * Creates new form Home
      */
-    public GuestPage() {
-        initComponents();
-
-        // set fullscreen window
-        //setSize(Toolkit.getDefaultToolkit().getScreenSize());
-        idPemesan();
-        ModelTbl = (DefaultTableModel) tabelBuktiPemesanan.getModel();
-        tampilFasilitasUmum();
-        tampilFasilitasKamar();
-
-        // display to comboBoxTipeKamar from db
-        JComboBox comboBoxTipeKamar = new JComboBox();
-        comboBoxTipeKamar.removeAllItems();
-        tampilComboBoxTipeKamar();
-    }
 
     public GuestPage(String username, String levelMysql) {
         initComponents();
@@ -109,6 +94,9 @@ public class GuestPage extends javax.swing.JFrame {
         // set level user
         String level = levelMysql;
         labelLevel.setText(level);
+        
+        // set fullscreen window
+        //setSize(Toolkit.getDefaultToolkit().getScreenSize());
 
     }
 
@@ -193,6 +181,10 @@ public class GuestPage extends javax.swing.JFrame {
                     + tabelBuktiPemesanan.getValueAt(i, 5) + "\t" + tabelBuktiPemesanan.getValueAt(i, 6) + "\t"
                     + tabelBuktiPemesanan.getValueAt(i, 7) + "\t" + tabelBuktiPemesanan.getValueAt(i, 8) + "\n";
         }
+        
+        JTableHeader header = tabelBuktiPemesanan.getTableHeader();
+        Font headerFont = new Font("Segoe UI Semibold", Font.PLAIN, 16);
+        header.setFont(headerFont);
     }
 
     public void tampilFasilitasUmum() {
@@ -208,7 +200,7 @@ public class GuestPage extends javax.swing.JFrame {
 
             // set font style and size for table heading
             JTableHeader header = tabelFasilitasUmum.getTableHeader();
-            Font headerFont = new Font("Verdana", Font.PLAIN, 15);
+            Font headerFont = new Font("Segoe UI Semibold", Font.PLAIN, 16);
             header.setFont(headerFont);
 
             // to remove all columns that we set before
@@ -247,7 +239,7 @@ public class GuestPage extends javax.swing.JFrame {
 
             // set font style and size for table heading
             JTableHeader header = tabelFasilitasKamarD.getTableHeader();
-            Font headerFont = new Font("Verdana", Font.PLAIN, 15);
+            Font headerFont = new Font("Segoe UI Semibold", Font.PLAIN, 16);
             header.setFont(headerFont);
 
             // to remove all columns that we set before
@@ -327,7 +319,7 @@ public class GuestPage extends javax.swing.JFrame {
                 
                 Graphics2D g2 = (Graphics2D)pg;
                 g2.translate(pf.getImageableX(), pf.getImageableY());
-                g2.scale(0.60,0.60);
+                g2.scale(0.65,0.60);
                 
                 jPanel2.print(g2);
                 
@@ -458,7 +450,7 @@ public class GuestPage extends javax.swing.JFrame {
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
-        jTabbedPane1.setFont(new java.awt.Font("Verdana", 1, 13)); // NOI18N
+        jTabbedPane1.setFont(new java.awt.Font("Segoe UI Semibold", 1, 18)); // NOI18N
 
         jPanel1.setBackground(new java.awt.Color(255, 255, 255));
         jPanel1.addMouseListener(new java.awt.event.MouseAdapter() {
@@ -467,7 +459,7 @@ public class GuestPage extends javax.swing.JFrame {
             }
         });
 
-        jLabel1.setFont(new java.awt.Font("Dialog", 1, 20)); // NOI18N
+        jLabel1.setFont(new java.awt.Font("Segoe UI Semibold", 1, 22)); // NOI18N
         jLabel1.setText("Tipe Kamar");
 
         jLabel4.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imgs/home_top_bar1000.png"))); // NOI18N
@@ -478,31 +470,31 @@ public class GuestPage extends javax.swing.JFrame {
             }
         });
 
-        jLabel7.setFont(new java.awt.Font("Dialog", 1, 20)); // NOI18N
+        jLabel7.setFont(new java.awt.Font("Segoe UI Semibold", 1, 22)); // NOI18N
         jLabel7.setText("Fasilitas");
 
-        jPanel5.setBackground(new java.awt.Color(1, 128, 148));
+        jPanel5.setBackground(new java.awt.Color(28, 68, 138));
         jPanel5.setMaximumSize(new java.awt.Dimension(500, 32767));
         jPanel5.setPreferredSize(new java.awt.Dimension(800, 99));
 
         jLabel3.setBackground(new java.awt.Color(254, 243, 229));
-        jLabel3.setFont(new java.awt.Font("Dialog", 1, 36)); // NOI18N
+        jLabel3.setFont(new java.awt.Font("Segoe UI Black", 0, 36)); // NOI18N
         jLabel3.setForeground(new java.awt.Color(246, 245, 245));
         jLabel3.setText("RizHotel");
 
-        txtwelcome.setFont(new java.awt.Font("Dialog", 1, 18)); // NOI18N
+        txtwelcome.setFont(new java.awt.Font("Segoe UI Semibold", 1, 22)); // NOI18N
         txtwelcome.setForeground(new java.awt.Color(246, 245, 245));
-        txtwelcome.setText("Selamat datang,");
+        txtwelcome.setText("Selamat datang");
 
-        txtWelcome1.setFont(new java.awt.Font("Dialog", 1, 18)); // NOI18N
+        txtWelcome1.setFont(new java.awt.Font("Segoe UI Semibold", 1, 22)); // NOI18N
         txtWelcome1.setForeground(new java.awt.Color(246, 245, 245));
         txtWelcome1.setText("username");
 
-        jLabel5.setFont(new java.awt.Font("Tahoma", 0, 13)); // NOI18N
+        jLabel5.setFont(new java.awt.Font("Segoe UI Semibold", 0, 15)); // NOI18N
         jLabel5.setForeground(new java.awt.Color(255, 255, 255));
         jLabel5.setText("Anda adalah");
 
-        labelLevel.setFont(new java.awt.Font("Tahoma", 0, 13)); // NOI18N
+        labelLevel.setFont(new java.awt.Font("Segoe UI Semibold", 0, 15)); // NOI18N
         labelLevel.setForeground(new java.awt.Color(255, 255, 255));
         labelLevel.setText("level");
 
@@ -513,36 +505,37 @@ public class GuestPage extends javax.swing.JFrame {
             .addGroup(jPanel5Layout.createSequentialGroup()
                 .addGap(20, 20, 20)
                 .addGroup(jPanel5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(txtwelcome)
-                    .addComponent(txtWelcome1)
+                    .addGroup(jPanel5Layout.createSequentialGroup()
+                        .addComponent(txtwelcome)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(txtWelcome1))
                     .addGroup(jPanel5Layout.createSequentialGroup()
                         .addComponent(jLabel5)
                         .addGap(4, 4, 4)
                         .addComponent(labelLevel)))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 636, Short.MAX_VALUE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 512, Short.MAX_VALUE)
                 .addComponent(jLabel3)
-                .addGap(42, 42, 42))
+                .addGap(39, 39, 39))
         );
         jPanel5Layout.setVerticalGroup(
             jPanel5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel5Layout.createSequentialGroup()
-                .addGroup(jPanel5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(jPanel5Layout.createSequentialGroup()
-                        .addGap(28, 28, 28)
-                        .addComponent(txtwelcome, javax.swing.GroupLayout.PREFERRED_SIZE, 17, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(txtWelcome1, javax.swing.GroupLayout.PREFERRED_SIZE, 16, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addGroup(jPanel5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                            .addComponent(jLabel5)
-                            .addComponent(labelLevel, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))
-                    .addGroup(jPanel5Layout.createSequentialGroup()
-                        .addGap(27, 27, 27)
-                        .addComponent(jLabel3, javax.swing.GroupLayout.PREFERRED_SIZE, 47, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                .addContainerGap())
+                .addGap(28, 28, 28)
+                .addGroup(jPanel5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(txtwelcome)
+                    .addComponent(txtWelcome1))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addGroup(jPanel5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jLabel5)
+                    .addComponent(labelLevel, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .addContainerGap(14, Short.MAX_VALUE))
+            .addGroup(jPanel5Layout.createSequentialGroup()
+                .addGap(25, 25, 25)
+                .addComponent(jLabel3, javax.swing.GroupLayout.PREFERRED_SIZE, 47, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
 
-        tabelFasilitasUmum.setFont(new java.awt.Font("Tahoma", 0, 15)); // NOI18N
+        tabelFasilitasUmum.setFont(new java.awt.Font("Segoe UI Semibold", 1, 16)); // NOI18N
         tabelFasilitasUmum.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
 
@@ -562,7 +555,7 @@ public class GuestPage extends javax.swing.JFrame {
         tabelFasilitasUmum.getTableHeader().setReorderingAllowed(false);
         jScrollPane6.setViewportView(tabelFasilitasUmum);
 
-        tabelFasilitasKamarD.setFont(new java.awt.Font("Tahoma", 0, 15)); // NOI18N
+        tabelFasilitasKamarD.setFont(new java.awt.Font("Segoe UI Semibold", 1, 16)); // NOI18N
         tabelFasilitasKamarD.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
 
@@ -583,7 +576,7 @@ public class GuestPage extends javax.swing.JFrame {
         jScrollPane7.setViewportView(tabelFasilitasKamarD);
 
         btnKeluar.setBackground(new java.awt.Color(255, 0, 0));
-        btnKeluar.setFont(new java.awt.Font("Segoe UI Semibold", 1, 15)); // NOI18N
+        btnKeluar.setFont(new java.awt.Font("Segoe UI", 1, 15)); // NOI18N
         btnKeluar.setForeground(new java.awt.Color(255, 255, 255));
         btnKeluar.setText("Keluar");
         btnKeluar.addActionListener(new java.awt.event.ActionListener() {
@@ -603,18 +596,15 @@ public class GuestPage extends javax.swing.JFrame {
                 .addGap(20, 20, 20)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(jPanel1Layout.createSequentialGroup()
-                        .addComponent(jLabel7, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                        .addComponent(jLabel7)
                         .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
                     .addGroup(jPanel1Layout.createSequentialGroup()
                         .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addGroup(jPanel1Layout.createSequentialGroup()
-                                .addComponent(jLabel1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                                .addGap(372, 372, 372))
-                            .addGroup(jPanel1Layout.createSequentialGroup()
-                                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                    .addComponent(jScrollPane7, javax.swing.GroupLayout.PREFERRED_SIZE, 490, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                    .addComponent(jScrollPane6, javax.swing.GroupLayout.PREFERRED_SIZE, 496, javax.swing.GroupLayout.PREFERRED_SIZE))
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))
+                            .addComponent(jLabel1)
+                            .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                                .addComponent(jScrollPane6, javax.swing.GroupLayout.DEFAULT_SIZE, 496, Short.MAX_VALUE)
+                                .addComponent(jScrollPane7)))
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                         .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addComponent(jLabel2, javax.swing.GroupLayout.PREFERRED_SIZE, 330, javax.swing.GroupLayout.PREFERRED_SIZE)
                             .addGroup(jPanel1Layout.createSequentialGroup()
@@ -636,18 +626,18 @@ public class GuestPage extends javax.swing.JFrame {
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
                     .addGroup(jPanel1Layout.createSequentialGroup()
                         .addGap(18, 18, 18)
-                        .addComponent(jLabel7, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                        .addComponent(jLabel7)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                         .addComponent(jScrollPane6, javax.swing.GroupLayout.DEFAULT_SIZE, 266, Short.MAX_VALUE)
                         .addGap(40, 40, 40)
-                        .addComponent(jLabel1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                        .addComponent(jLabel1)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                         .addComponent(jScrollPane7, javax.swing.GroupLayout.DEFAULT_SIZE, 239, Short.MAX_VALUE))
                     .addGroup(jPanel1Layout.createSequentialGroup()
                         .addGap(0, 0, Short.MAX_VALUE)
                         .addComponent(jLabel2, javax.swing.GroupLayout.PREFERRED_SIZE, 205, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(149, 149, 149)
-                        .addComponent(btnKeluar, javax.swing.GroupLayout.PREFERRED_SIZE, 34, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                        .addGap(139, 139, 139)
+                        .addComponent(btnKeluar, javax.swing.GroupLayout.PREFERRED_SIZE, 44, javax.swing.GroupLayout.PREFERRED_SIZE)))
                 .addContainerGap(1480, Short.MAX_VALUE))
         );
 
@@ -657,48 +647,48 @@ public class GuestPage extends javax.swing.JFrame {
 
         jPanel2.setBackground(new java.awt.Color(255, 255, 255));
 
-        jPanel4.setBackground(new java.awt.Color(1, 128, 148));
+        jPanel4.setBackground(new java.awt.Color(28, 68, 138));
 
-        jLabel10.setFont(new java.awt.Font("Tahoma", 1, 15)); // NOI18N
+        jLabel10.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
         jLabel10.setForeground(new java.awt.Color(255, 255, 255));
         jLabel10.setText("Nama Pemesan");
 
-        txtNamaPemesanD.setFont(new java.awt.Font("Tahoma", 0, 15)); // NOI18N
+        txtNamaPemesanD.setFont(new java.awt.Font("Segoe UI", 0, 16)); // NOI18N
 
-        jLabel15.setFont(new java.awt.Font("Tahoma", 1, 15)); // NOI18N
+        jLabel15.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
         jLabel15.setForeground(new java.awt.Color(255, 255, 255));
         jLabel15.setText("Email");
 
-        txtEmailD.setFont(new java.awt.Font("Tahoma", 0, 15)); // NOI18N
+        txtEmailD.setFont(new java.awt.Font("Segoe UI", 0, 16)); // NOI18N
 
-        txtNoHPD.setFont(new java.awt.Font("Tahoma", 0, 15)); // NOI18N
+        txtNoHPD.setFont(new java.awt.Font("Segoe UI", 0, 16)); // NOI18N
 
-        jLabel16.setFont(new java.awt.Font("Tahoma", 1, 15)); // NOI18N
+        jLabel16.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
         jLabel16.setForeground(new java.awt.Color(255, 255, 255));
         jLabel16.setText("No. Handphone");
 
-        jLabel17.setFont(new java.awt.Font("Tahoma", 1, 15)); // NOI18N
+        jLabel17.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
         jLabel17.setForeground(new java.awt.Color(255, 255, 255));
         jLabel17.setText("Tipe Kamar");
 
-        comboBoxTipeKamar.setFont(new java.awt.Font("Tahoma", 0, 15)); // NOI18N
+        comboBoxTipeKamar.setFont(new java.awt.Font("Segoe UI", 0, 16)); // NOI18N
         comboBoxTipeKamar.addFocusListener(new java.awt.event.FocusAdapter() {
             public void focusLost(java.awt.event.FocusEvent evt) {
                 comboBoxTipeKamarFocusLost(evt);
             }
         });
 
-        jLabel18.setFont(new java.awt.Font("Tahoma", 1, 15)); // NOI18N
+        jLabel18.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
         jLabel18.setForeground(new java.awt.Color(255, 255, 255));
         jLabel18.setText("Tanggal Check In");
 
-        txtCheckInD.setFont(new java.awt.Font("Tahoma", 0, 15)); // NOI18N
+        txtCheckInD.setFont(new java.awt.Font("Segoe UI", 0, 16)); // NOI18N
 
-        jLabel19.setFont(new java.awt.Font("Tahoma", 1, 15)); // NOI18N
+        jLabel19.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
         jLabel19.setForeground(new java.awt.Color(255, 255, 255));
         jLabel19.setText("Tanggal Check Out");
 
-        txtCheckOutD.setFont(new java.awt.Font("Tahoma", 0, 15)); // NOI18N
+        txtCheckOutD.setFont(new java.awt.Font("Segoe UI", 0, 16)); // NOI18N
         txtCheckOutD.addFocusListener(new java.awt.event.FocusAdapter() {
             public void focusLost(java.awt.event.FocusEvent evt) {
                 txtCheckOutDFocusLost(evt);
@@ -706,33 +696,33 @@ public class GuestPage extends javax.swing.JFrame {
         });
 
         noPemesanD.setEditable(false);
-        noPemesanD.setFont(new java.awt.Font("Tahoma", 0, 15)); // NOI18N
+        noPemesanD.setFont(new java.awt.Font("Segoe UI", 0, 16)); // NOI18N
 
-        jLabel12.setFont(new java.awt.Font("Tahoma", 1, 15)); // NOI18N
+        jLabel12.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
         jLabel12.setForeground(new java.awt.Color(255, 255, 255));
         jLabel12.setText("No. Pemesan");
 
-        jLabel21.setFont(new java.awt.Font("Tahoma", 1, 15)); // NOI18N
+        jLabel21.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
         jLabel21.setForeground(new java.awt.Color(255, 255, 255));
         jLabel21.setText("Total Harga");
 
         txtTtlHargaD.setEditable(false);
-        txtTtlHargaD.setFont(new java.awt.Font("Tahoma", 0, 15)); // NOI18N
+        txtTtlHargaD.setFont(new java.awt.Font("Segoe UI", 0, 16)); // NOI18N
 
-        jLabel22.setFont(new java.awt.Font("Tahoma", 1, 15)); // NOI18N
+        jLabel22.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
         jLabel22.setForeground(new java.awt.Color(255, 255, 255));
         jLabel22.setText("Jumlah Kamar");
 
-        txtJumlahKamar.setFont(new java.awt.Font("Tahoma", 0, 15)); // NOI18N
+        txtJumlahKamar.setFont(new java.awt.Font("Segoe UI", 0, 16)); // NOI18N
 
         hargaKamarDipilih.setEditable(false);
-        hargaKamarDipilih.setFont(new java.awt.Font("Tahoma", 0, 15)); // NOI18N
+        hargaKamarDipilih.setFont(new java.awt.Font("Segoe UI", 0, 16)); // NOI18N
 
-        jLabel23.setFont(new java.awt.Font("Tahoma", 1, 15)); // NOI18N
+        jLabel23.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
         jLabel23.setForeground(new java.awt.Color(255, 255, 255));
         jLabel23.setText("Harga Kamar");
 
-        jLabel9.setFont(new java.awt.Font("Dialog", 1, 24)); // NOI18N
+        jLabel9.setFont(new java.awt.Font("Segoe UI Black", 0, 22)); // NOI18N
         jLabel9.setForeground(new java.awt.Color(238, 237, 237));
         jLabel9.setText("Form Pemesanan");
 
@@ -819,14 +809,14 @@ public class GuestPage extends javax.swing.JFrame {
                 .addGap(15, 15, 15))
         );
 
-        txtWelcome2.setFont(new java.awt.Font("Dialog", 1, 18)); // NOI18N
-        txtWelcome2.setText("Selamat datang,");
+        txtWelcome2.setFont(new java.awt.Font("Segoe UI Semibold", 1, 22)); // NOI18N
+        txtWelcome2.setText("Selamat datang");
 
-        txtWelcome5.setFont(new java.awt.Font("Dialog", 1, 18)); // NOI18N
+        txtWelcome5.setFont(new java.awt.Font("Segoe UI Semibold", 1, 22)); // NOI18N
         txtWelcome5.setText("username");
 
         btnKonfirmasiPesanan.setBackground(new java.awt.Color(0, 204, 0));
-        btnKonfirmasiPesanan.setFont(new java.awt.Font("Tahoma", 0, 15)); // NOI18N
+        btnKonfirmasiPesanan.setFont(new java.awt.Font("Segoe UI", 1, 15)); // NOI18N
         btnKonfirmasiPesanan.setText("Konfirmasi Pesanan");
         btnKonfirmasiPesanan.setPreferredSize(new java.awt.Dimension(125, 35));
         btnKonfirmasiPesanan.addActionListener(new java.awt.event.ActionListener() {
@@ -836,7 +826,8 @@ public class GuestPage extends javax.swing.JFrame {
         });
 
         jButton1.setBackground(new java.awt.Color(255, 102, 0));
-        jButton1.setFont(new java.awt.Font("Tahoma", 0, 15)); // NOI18N
+        jButton1.setFont(new java.awt.Font("Segoe UI", 1, 15)); // NOI18N
+        jButton1.setForeground(new java.awt.Color(255, 255, 255));
         jButton1.setText("Batal Isi");
         jButton1.setPreferredSize(new java.awt.Dimension(71, 35));
         jButton1.addActionListener(new java.awt.event.ActionListener() {
@@ -853,7 +844,8 @@ public class GuestPage extends javax.swing.JFrame {
         });
 
         jButton3.setBackground(new java.awt.Color(255, 0, 0));
-        jButton3.setFont(new java.awt.Font("Tahoma", 0, 15)); // NOI18N
+        jButton3.setFont(new java.awt.Font("Segoe UI", 1, 15)); // NOI18N
+        jButton3.setForeground(new java.awt.Color(255, 255, 255));
         jButton3.setText("Keluar");
         jButton3.setPreferredSize(new java.awt.Dimension(73, 35));
 
@@ -868,29 +860,33 @@ public class GuestPage extends javax.swing.JFrame {
                         .addComponent(btnKeluar2))
                     .addGroup(jPanel2Layout.createSequentialGroup()
                         .addGap(20, 20, 20)
-                        .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(txtWelcome2)
-                            .addComponent(txtWelcome5)
-                            .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
-                                .addGroup(jPanel2Layout.createSequentialGroup()
-                                    .addComponent(btnKonfirmasiPesanan, javax.swing.GroupLayout.PREFERRED_SIZE, 159, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                    .addGap(269, 269, 269)
-                                    .addComponent(jButton1, javax.swing.GroupLayout.PREFERRED_SIZE, 87, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                    .addGap(308, 308, 308)
-                                    .addComponent(jButton3, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                                .addComponent(jPanel4, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))))
+                        .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel2Layout.createSequentialGroup()
+                                .addComponent(btnKonfirmasiPesanan, javax.swing.GroupLayout.PREFERRED_SIZE, 174, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                .addComponent(jButton1, javax.swing.GroupLayout.PREFERRED_SIZE, 92, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addGap(290, 290, 290)
+                                .addComponent(jButton3, javax.swing.GroupLayout.PREFERRED_SIZE, 86, javax.swing.GroupLayout.PREFERRED_SIZE))
+                            .addGroup(jPanel2Layout.createSequentialGroup()
+                                .addGap(1, 1, 1)
+                                .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                    .addGroup(jPanel2Layout.createSequentialGroup()
+                                        .addComponent(txtWelcome2)
+                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                        .addComponent(txtWelcome5))
+                                    .addComponent(jPanel4, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))))))
                 .addContainerGap(2114, Short.MAX_VALUE))
         );
         jPanel2Layout.setVerticalGroup(
             jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel2Layout.createSequentialGroup()
-                .addContainerGap()
-                .addComponent(txtWelcome2)
+                .addGap(23, 23, 23)
+                .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(txtWelcome2)
+                    .addComponent(txtWelcome5))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(txtWelcome5)
-                .addGap(18, 18, 18)
                 .addComponent(jPanel4, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(18, 18, 18)
+                .addGap(49, 49, 49)
                 .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(btnKonfirmasiPesanan, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(jButton1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
@@ -911,10 +907,10 @@ public class GuestPage extends javax.swing.JFrame {
             }
         });
 
-        jLabel11.setFont(new java.awt.Font("Dialog", 1, 18)); // NOI18N
-        jLabel11.setText("Selamat datang,");
+        jLabel11.setFont(new java.awt.Font("Segoe UI Semibold", 1, 22)); // NOI18N
+        jLabel11.setText("Selamat datang");
 
-        tabelBuktiPemesanan.setFont(new java.awt.Font("Tahoma", 0, 15)); // NOI18N
+        tabelBuktiPemesanan.setFont(new java.awt.Font("Segoe UI Semibold", 0, 16)); // NOI18N
         tabelBuktiPemesanan.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
 
@@ -945,8 +941,8 @@ public class GuestPage extends javax.swing.JFrame {
         });
 
         btnKeluar3.setBackground(new java.awt.Color(255, 0, 0));
-        btnKeluar3.setFont(new java.awt.Font("Tahoma", 0, 15)); // NOI18N
-        btnKeluar3.setForeground(new java.awt.Color(240, 238, 238));
+        btnKeluar3.setFont(new java.awt.Font("Segoe UI", 1, 15)); // NOI18N
+        btnKeluar3.setForeground(new java.awt.Color(255, 255, 255));
         btnKeluar3.setText("Keluar");
         btnKeluar3.setPreferredSize(new java.awt.Dimension(73, 35));
         btnKeluar3.addActionListener(new java.awt.event.ActionListener() {
@@ -963,10 +959,10 @@ public class GuestPage extends javax.swing.JFrame {
         txtWelcome4.setForeground(new java.awt.Color(235, 235, 235));
         txtWelcome4.setText("username");
 
-        txtWelcome3.setFont(new java.awt.Font("Dialog", 1, 18)); // NOI18N
+        txtWelcome3.setFont(new java.awt.Font("Segoe UI Semibold", 1, 22)); // NOI18N
         txtWelcome3.setText("username");
 
-        jLabel13.setFont(new java.awt.Font("Dialog", 1, 24)); // NOI18N
+        jLabel13.setFont(new java.awt.Font("Segoe UI Black", 0, 20)); // NOI18N
         jLabel13.setText("Bukti Reservasi");
 
         jLabel20.setFont(new java.awt.Font("Dialog", 1, 18)); // NOI18N
@@ -984,16 +980,19 @@ public class GuestPage extends javax.swing.JFrame {
                     .addGroup(jPanel3Layout.createSequentialGroup()
                         .addGap(30, 30, 30)
                         .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(txtWelcome3)
-                            .addComponent(jLabel11)
                             .addGroup(jPanel3Layout.createSequentialGroup()
-                                .addComponent(btnCetak, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addGap(151, 151, 151)
-                                .addComponent(jLabel20)
-                                .addGap(149, 149, 149)
-                                .addComponent(btnKeluar3, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                            .addComponent(jScrollPane4, javax.swing.GroupLayout.PREFERRED_SIZE, 873, javax.swing.GroupLayout.PREFERRED_SIZE))))
-                .addGap(2126, 2126, 2126))
+                                .addComponent(jLabel11)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                .addComponent(txtWelcome3))
+                            .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
+                                .addGroup(jPanel3Layout.createSequentialGroup()
+                                    .addComponent(btnCetak, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                    .addGap(151, 151, 151)
+                                    .addComponent(jLabel20)
+                                    .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                    .addComponent(btnKeluar3, javax.swing.GroupLayout.PREFERRED_SIZE, 86, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                .addComponent(jScrollPane4, javax.swing.GroupLayout.PREFERRED_SIZE, 902, javax.swing.GroupLayout.PREFERRED_SIZE)))))
+                .addGap(2098, 2098, 2098))
             .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                 .addGroup(jPanel3Layout.createSequentialGroup()
                     .addGap(1045, 1045, 1045)
@@ -1006,9 +1005,9 @@ public class GuestPage extends javax.swing.JFrame {
             jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel3Layout.createSequentialGroup()
                 .addGap(19, 19, 19)
-                .addComponent(jLabel11)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(txtWelcome3)
+                .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jLabel11)
+                    .addComponent(txtWelcome3))
                 .addGap(18, 18, 18)
                 .addComponent(jLabel13)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
@@ -1018,14 +1017,14 @@ public class GuestPage extends javax.swing.JFrame {
                     .addComponent(btnKeluar3, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(btnCetak, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(jLabel20))
-                .addGap(0, 2492, Short.MAX_VALUE))
+                .addGap(0, 2533, Short.MAX_VALUE))
             .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                 .addGroup(jPanel3Layout.createSequentialGroup()
                     .addGap(1034, 1034, 1034)
                     .addComponent(txtwelcome1)
                     .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                     .addComponent(txtWelcome4)
-                    .addContainerGap(2083, Short.MAX_VALUE)))
+                    .addContainerGap(2096, Short.MAX_VALUE)))
         );
 
         jScrollPane3.setViewportView(jPanel3);
@@ -1035,7 +1034,7 @@ public class GuestPage extends javax.swing.JFrame {
         jPanel7.setBackground(new java.awt.Color(255, 255, 255));
 
         jButton2.setBackground(new java.awt.Color(255, 0, 0));
-        jButton2.setFont(new java.awt.Font("Segoe UI Semibold", 0, 14)); // NOI18N
+        jButton2.setFont(new java.awt.Font("Segoe UI", 1, 15)); // NOI18N
         jButton2.setForeground(new java.awt.Color(255, 255, 255));
         jButton2.setText("Kembali ke Login");
         jButton2.addActionListener(new java.awt.event.ActionListener() {
@@ -1049,16 +1048,16 @@ public class GuestPage extends javax.swing.JFrame {
         jPanel7Layout.setHorizontalGroup(
             jPanel7Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel7Layout.createSequentialGroup()
-                .addContainerGap(431, Short.MAX_VALUE)
+                .addContainerGap(424, Short.MAX_VALUE)
                 .addComponent(jButton2)
-                .addContainerGap(408, Short.MAX_VALUE))
+                .addContainerGap(402, Short.MAX_VALUE))
         );
         jPanel7Layout.setVerticalGroup(
             jPanel7Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel7Layout.createSequentialGroup()
                 .addGap(46, 46, 46)
-                .addComponent(jButton2, javax.swing.GroupLayout.PREFERRED_SIZE, 34, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(1365, Short.MAX_VALUE))
+                .addComponent(jButton2, javax.swing.GroupLayout.PREFERRED_SIZE, 41, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(1352, Short.MAX_VALUE))
         );
 
         jTabbedPane1.addTab("Kembali Login", jPanel7);
@@ -1137,12 +1136,6 @@ public class GuestPage extends javax.swing.JFrame {
         tabelFasilitasKamarD.clearSelection();
     }//GEN-LAST:event_jPanel1MouseClicked
 
-    private void jLabel4MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel4MouseClicked
-        // to remove selection at row
-        tabelFasilitasKamarD.clearSelection();
-        tabelFasilitasUmum.clearSelection();
-    }//GEN-LAST:event_jLabel4MouseClicked
-
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
         bersihkanBuktiPemesanan();
     }//GEN-LAST:event_jButton1ActionPerformed
@@ -1156,6 +1149,12 @@ public class GuestPage extends javax.swing.JFrame {
         login.setVisible(true);
         setVisible(false);
     }//GEN-LAST:event_jButton2ActionPerformed
+
+    private void jLabel4MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel4MouseClicked
+        // to remove selection at row
+        tabelFasilitasKamarD.clearSelection();
+        tabelFasilitasUmum.clearSelection();
+    }//GEN-LAST:event_jLabel4MouseClicked
 
     /**
      * @param args the command line arguments
@@ -1197,7 +1196,7 @@ public class GuestPage extends javax.swing.JFrame {
         /* Create and display the form */
         java.awt.EventQueue.invokeLater(new Runnable() {
             public void run() {
-                new GuestPage().setVisible(true);
+                new GuestPage("", "").setVisible(true);
             }
         });
     }

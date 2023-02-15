@@ -6,6 +6,7 @@
 package main;
 
 import db.DBConnection;
+import java.awt.Font;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.awt.event.KeyEvent;
@@ -19,6 +20,7 @@ import javax.swing.JFrame;
 import javax.swing.JOptionPane;
 import javax.swing.JPanel;
 import javax.swing.table.DefaultTableModel;
+import javax.swing.table.JTableHeader;
 
 /**
  *
@@ -77,6 +79,10 @@ public class ResepsionisPage extends javax.swing.JFrame {
         } catch(Exception e) {
             JOptionPane.showMessageDialog(rootPane, e);
         }
+        
+        JTableHeader header = tabelReservasiD.getTableHeader();
+        Font headerFont = new Font("Segoe UI Semibold", Font.PLAIN, 16);
+        header.setFont(headerFont);
     }
     
     public void prosesCari() {
@@ -137,13 +143,15 @@ public class ResepsionisPage extends javax.swing.JFrame {
         jPanel1.setBackground(new java.awt.Color(255, 255, 255));
         jPanel1.setPreferredSize(new java.awt.Dimension(1000, 600));
 
-        txtWelcome3.setFont(new java.awt.Font("Dialog", 1, 18)); // NOI18N
+        txtWelcome3.setFont(new java.awt.Font("Segoe UI Semibold", 1, 22)); // NOI18N
+        txtWelcome3.setForeground(new java.awt.Color(28, 68, 138));
         txtWelcome3.setText("Selamat datang");
 
-        txtWelcome1.setFont(new java.awt.Font("Dialog", 1, 18)); // NOI18N
+        txtWelcome1.setFont(new java.awt.Font("Segoe UI Semibold", 1, 22)); // NOI18N
+        txtWelcome1.setForeground(new java.awt.Color(28, 68, 138));
         txtWelcome1.setText("username");
 
-        tabelReservasiD.setFont(new java.awt.Font("Tahoma", 0, 15)); // NOI18N
+        tabelReservasiD.setFont(new java.awt.Font("Segoe UI Semibold", 0, 16)); // NOI18N
         tabelReservasiD.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
 
@@ -155,14 +163,17 @@ public class ResepsionisPage extends javax.swing.JFrame {
         tabelReservasiD.getTableHeader().setReorderingAllowed(false);
         jScrollPane1.setViewportView(tabelReservasiD);
 
-        jLabel2.setFont(new java.awt.Font("Tahoma", 1, 24)); // NOI18N
+        jLabel2.setFont(new java.awt.Font("Segoe UI", 1, 36)); // NOI18N
+        jLabel2.setForeground(new java.awt.Color(28, 68, 138));
         jLabel2.setText("Data Reservasi");
 
         jLabel3.setFont(new java.awt.Font("Segoe UI Semibold", 0, 16)); // NOI18N
+        jLabel3.setForeground(new java.awt.Color(28, 68, 138));
         jLabel3.setText("Cari berdasarkan nama dan tanggal");
 
-        txtKolomCari.setFont(new java.awt.Font("Tahoma", 0, 16)); // NOI18N
-        txtKolomCari.setPreferredSize(new java.awt.Dimension(6, 35));
+        txtKolomCari.setFont(new java.awt.Font("Segoe UI Semibold", 0, 16)); // NOI18N
+        txtKolomCari.setForeground(new java.awt.Color(28, 68, 138));
+        txtKolomCari.setPreferredSize(new java.awt.Dimension(6, 30));
         txtKolomCari.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
                 txtKolomCariMouseClicked(evt);
@@ -174,8 +185,8 @@ public class ResepsionisPage extends javax.swing.JFrame {
             }
         });
 
-        btnCari.setBackground(new java.awt.Color(1, 128, 148));
-        btnCari.setFont(new java.awt.Font("Segoe UI Semibold", 0, 16)); // NOI18N
+        btnCari.setBackground(new java.awt.Color(28, 68, 138));
+        btnCari.setFont(new java.awt.Font("Segoe UI", 1, 16)); // NOI18N
         btnCari.setForeground(new java.awt.Color(255, 255, 255));
         btnCari.setText("Cari");
         btnCari.addActionListener(new java.awt.event.ActionListener() {
@@ -194,10 +205,12 @@ public class ResepsionisPage extends javax.swing.JFrame {
             }
         });
 
-        jLabel1.setFont(new java.awt.Font("Tahoma", 0, 13)); // NOI18N
+        jLabel1.setFont(new java.awt.Font("Segoe UI Semibold", 1, 15)); // NOI18N
+        jLabel1.setForeground(new java.awt.Color(28, 68, 138));
         jLabel1.setText("Anda adalah");
 
-        labelLevel.setFont(new java.awt.Font("Tahoma", 0, 13)); // NOI18N
+        labelLevel.setFont(new java.awt.Font("Segoe UI Semibold", 1, 15)); // NOI18N
+        labelLevel.setForeground(new java.awt.Color(28, 68, 138));
         labelLevel.setText("level");
 
         javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
@@ -208,36 +221,35 @@ public class ResepsionisPage extends javax.swing.JFrame {
                 .addGap(32, 32, 32)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(jPanel1Layout.createSequentialGroup()
-                        .addComponent(jLabel1)
-                        .addGap(4, 4, 4)
-                        .addComponent(labelLevel)
-                        .addGap(0, 0, Short.MAX_VALUE))
-                    .addGroup(jPanel1Layout.createSequentialGroup()
                         .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addComponent(jLabel2)
                             .addGroup(jPanel1Layout.createSequentialGroup()
                                 .addComponent(txtWelcome3)
                                 .addGap(4, 4, 4)
                                 .addComponent(txtWelcome1)))
-                        .addContainerGap(693, Short.MAX_VALUE))
-                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
+                        .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                    .addGroup(jPanel1Layout.createSequentialGroup()
                         .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                            .addComponent(jScrollPane1, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, 890, Short.MAX_VALUE)
-                            .addGroup(jPanel1Layout.createSequentialGroup()
-                                .addComponent(jLabel3)
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                .addComponent(txtKolomCari, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                                .addComponent(btnCari))
-                            .addGroup(jPanel1Layout.createSequentialGroup()
-                                .addGap(0, 0, Short.MAX_VALUE)
-                                .addComponent(btnLoginD)))
-                        .addGap(30, 30, 30))))
+                            .addComponent(btnLoginD)
+                            .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
+                                .addComponent(jScrollPane1, javax.swing.GroupLayout.Alignment.LEADING)
+                                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                    .addGroup(jPanel1Layout.createSequentialGroup()
+                                        .addComponent(jLabel3)
+                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                        .addComponent(txtKolomCari, javax.swing.GroupLayout.PREFERRED_SIZE, 506, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                        .addComponent(btnCari))
+                                    .addGroup(jPanel1Layout.createSequentialGroup()
+                                        .addComponent(jLabel1)
+                                        .addGap(4, 4, 4)
+                                        .addComponent(labelLevel)))))
+                        .addGap(0, 31, Short.MAX_VALUE))))
         );
         jPanel1Layout.setVerticalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel1Layout.createSequentialGroup()
-                .addGap(30, 30, 30)
+                .addGap(20, 20, 20)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(txtWelcome3)
                     .addComponent(txtWelcome1, javax.swing.GroupLayout.PREFERRED_SIZE, 19, javax.swing.GroupLayout.PREFERRED_SIZE))
@@ -245,25 +257,25 @@ public class ResepsionisPage extends javax.swing.JFrame {
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel1)
                     .addComponent(labelLevel))
-                .addGap(21, 21, 21)
+                .addGap(18, 18, 18)
                 .addComponent(jLabel2)
-                .addGap(33, 33, 33)
+                .addGap(18, 18, 18)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel3)
                     .addComponent(txtKolomCari, javax.swing.GroupLayout.PREFERRED_SIZE, 44, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(btnCari, javax.swing.GroupLayout.PREFERRED_SIZE, 44, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addComponent(jScrollPane1, javax.swing.GroupLayout.DEFAULT_SIZE, 235, Short.MAX_VALUE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(jScrollPane1, javax.swing.GroupLayout.DEFAULT_SIZE, 205, Short.MAX_VALUE)
+                .addGap(18, 18, 18)
                 .addComponent(btnLoginD, javax.swing.GroupLayout.PREFERRED_SIZE, 44, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(35, 35, 35))
+                .addGap(51, 51, 51))
         );
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(jPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, 952, Short.MAX_VALUE)
+            .addComponent(jPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, 905, Short.MAX_VALUE)
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)

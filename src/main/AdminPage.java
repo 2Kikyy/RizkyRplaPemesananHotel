@@ -210,7 +210,7 @@ public class AdminPage extends javax.swing.JFrame {
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
-        jTabbedPane1.setFont(new java.awt.Font("Verdana", 1, 14)); // NOI18N
+        jTabbedPane1.setFont(new java.awt.Font("Segoe UI Semibold", 0, 18)); // NOI18N
 
         jPanel1.setBackground(new java.awt.Color(255, 255, 255));
         jPanel1.addMouseListener(new java.awt.event.MouseAdapter() {
@@ -237,7 +237,7 @@ public class AdminPage extends javax.swing.JFrame {
         jScrollPane2.setViewportView(tabelFasilitasKamarD);
 
         btnEditKamarD.setBackground(new java.awt.Color(255, 153, 0));
-        btnEditKamarD.setFont(new java.awt.Font("Tahoma", 0, 15)); // NOI18N
+        btnEditKamarD.setFont(new java.awt.Font("Segoe UI", 1, 15)); // NOI18N
         btnEditKamarD.setText("Edit");
         btnEditKamarD.setPreferredSize(new java.awt.Dimension(50, 35));
         btnEditKamarD.addActionListener(new java.awt.event.ActionListener() {
@@ -247,7 +247,7 @@ public class AdminPage extends javax.swing.JFrame {
         });
 
         btnTambahKamarD.setBackground(new java.awt.Color(0, 204, 0));
-        btnTambahKamarD.setFont(new java.awt.Font("Tahoma", 0, 15)); // NOI18N
+        btnTambahKamarD.setFont(new java.awt.Font("Segoe UI", 1, 15)); // NOI18N
         btnTambahKamarD.setText("Tambah");
         btnTambahKamarD.setPreferredSize(new java.awt.Dimension(50, 35));
         btnTambahKamarD.addActionListener(new java.awt.event.ActionListener() {
@@ -257,7 +257,7 @@ public class AdminPage extends javax.swing.JFrame {
         });
 
         btnHapusKamarD.setBackground(new java.awt.Color(255, 0, 0));
-        btnHapusKamarD.setFont(new java.awt.Font("Tahoma", 0, 15)); // NOI18N
+        btnHapusKamarD.setFont(new java.awt.Font("Segoe UI", 1, 15)); // NOI18N
         btnHapusKamarD.setForeground(new java.awt.Color(244, 244, 244));
         btnHapusKamarD.setText("Hapus");
         btnHapusKamarD.setPreferredSize(new java.awt.Dimension(50, 35));
@@ -267,26 +267,34 @@ public class AdminPage extends javax.swing.JFrame {
             }
         });
 
-        jLabel4.setFont(new java.awt.Font("Segoe UI Semibold", 1, 16)); // NOI18N
+        jLabel4.setFont(new java.awt.Font("Segoe UI", 0, 16)); // NOI18N
+        jLabel4.setForeground(new java.awt.Color(28, 68, 138));
         jLabel4.setText("ID");
 
         txtIdKamarD.setEditable(false);
-        txtIdKamarD.setFont(new java.awt.Font("Tahoma", 0, 16)); // NOI18N
+        txtIdKamarD.setFont(new java.awt.Font("Segoe UI", 0, 16)); // NOI18N
+        txtIdKamarD.setForeground(new java.awt.Color(28, 68, 138));
 
-        txtTipeKamarD.setFont(new java.awt.Font("Tahoma", 0, 16)); // NOI18N
+        txtTipeKamarD.setFont(new java.awt.Font("Segoe UI", 0, 16)); // NOI18N
+        txtTipeKamarD.setForeground(new java.awt.Color(28, 68, 138));
 
-        jLabel5.setFont(new java.awt.Font("Segoe UI Semibold", 1, 16)); // NOI18N
+        jLabel5.setFont(new java.awt.Font("Segoe UI", 0, 16)); // NOI18N
+        jLabel5.setForeground(new java.awt.Color(28, 68, 138));
         jLabel5.setText("Tipe Kamar");
 
-        jLabel6.setFont(new java.awt.Font("Segoe UI Semibold", 1, 16)); // NOI18N
+        jLabel6.setFont(new java.awt.Font("Segoe UI", 0, 16)); // NOI18N
+        jLabel6.setForeground(new java.awt.Color(28, 68, 138));
         jLabel6.setText("Harga");
 
-        txtHargaKamarD.setFont(new java.awt.Font("Tahoma", 0, 16)); // NOI18N
+        txtHargaKamarD.setFont(new java.awt.Font("Segoe UI", 0, 16)); // NOI18N
+        txtHargaKamarD.setForeground(new java.awt.Color(28, 68, 138));
 
         jLabel7.setFont(new java.awt.Font("Segoe UI Semibold", 1, 16)); // NOI18N
+        jLabel7.setForeground(new java.awt.Color(28, 68, 138));
         jLabel7.setText("Cari berdasarkan ID, Tipe Kamar, & Harga");
 
-        txtCariKamarD.setFont(new java.awt.Font("Tahoma", 0, 16)); // NOI18N
+        txtCariKamarD.setFont(new java.awt.Font("Segoe UI", 0, 16)); // NOI18N
+        txtCariKamarD.setForeground(new java.awt.Color(28, 68, 138));
         txtCariKamarD.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
                 txtCariKamarDMouseClicked(evt);
@@ -298,8 +306,8 @@ public class AdminPage extends javax.swing.JFrame {
             }
         });
 
-        btnCariKamarD.setBackground(new java.awt.Color(36, 116, 145));
-        btnCariKamarD.setFont(new java.awt.Font("Tahoma", 0, 16)); // NOI18N
+        btnCariKamarD.setBackground(new java.awt.Color(28, 68, 138));
+        btnCariKamarD.setFont(new java.awt.Font("Segoe UI", 1, 15)); // NOI18N
         btnCariKamarD.setForeground(new java.awt.Color(255, 255, 255));
         btnCariKamarD.setText("Cari");
         btnCariKamarD.addActionListener(new java.awt.event.ActionListener() {
@@ -308,16 +316,20 @@ public class AdminPage extends javax.swing.JFrame {
             }
         });
 
-        txtWelcome2.setFont(new java.awt.Font("Dialog", 1, 18)); // NOI18N
+        txtWelcome2.setFont(new java.awt.Font("Segoe UI Semibold", 1, 22)); // NOI18N
+        txtWelcome2.setForeground(new java.awt.Color(28, 68, 138));
         txtWelcome2.setText("Selamat datang");
 
-        txtWelcomee1.setFont(new java.awt.Font("Dialog", 1, 18)); // NOI18N
+        txtWelcomee1.setFont(new java.awt.Font("Segoe UI Semibold", 1, 22)); // NOI18N
+        txtWelcomee1.setForeground(new java.awt.Color(28, 68, 138));
         txtWelcomee1.setText("username");
 
-        jLabel8.setFont(new java.awt.Font("Tahoma", 0, 13)); // NOI18N
+        jLabel8.setFont(new java.awt.Font("Segoe UI Semibold", 1, 15)); // NOI18N
+        jLabel8.setForeground(new java.awt.Color(28, 68, 138));
         jLabel8.setText("Anda adalah");
 
-        labelLevel.setFont(new java.awt.Font("Tahoma", 0, 13)); // NOI18N
+        labelLevel.setFont(new java.awt.Font("Segoe UI Semibold", 1, 15)); // NOI18N
+        labelLevel.setForeground(new java.awt.Color(28, 68, 138));
         labelLevel.setText("level");
 
         javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
@@ -335,14 +347,8 @@ public class AdminPage extends javax.swing.JFrame {
                         .addComponent(txtWelcome2)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                         .addComponent(txtWelcomee1))
-                    .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
+                    .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
                         .addComponent(jScrollPane2, javax.swing.GroupLayout.Alignment.LEADING)
-                        .addGroup(javax.swing.GroupLayout.Alignment.LEADING, jPanel1Layout.createSequentialGroup()
-                            .addComponent(jLabel7)
-                            .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                            .addComponent(txtCariKamarD, javax.swing.GroupLayout.PREFERRED_SIZE, 386, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                            .addComponent(btnCariKamarD))
                         .addGroup(javax.swing.GroupLayout.Alignment.LEADING, jPanel1Layout.createSequentialGroup()
                             .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                                 .addComponent(btnTambahKamarD, javax.swing.GroupLayout.PREFERRED_SIZE, 92, javax.swing.GroupLayout.PREFERRED_SIZE)
@@ -357,14 +363,22 @@ public class AdminPage extends javax.swing.JFrame {
                                 .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
                                     .addComponent(btnEditKamarD, javax.swing.GroupLayout.PREFERRED_SIZE, 72, javax.swing.GroupLayout.PREFERRED_SIZE)
                                     .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                                    .addComponent(btnHapusKamarD, javax.swing.GroupLayout.PREFERRED_SIZE, 73, javax.swing.GroupLayout.PREFERRED_SIZE))))
-                        .addGroup(jPanel1Layout.createSequentialGroup()
-                            .addComponent(jLabel4)
-                            .addGap(142, 142, 142)
-                            .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                                .addComponent(txtIdKamarD, javax.swing.GroupLayout.DEFAULT_SIZE, 603, Short.MAX_VALUE)
-                                .addComponent(txtTipeKamarD)))))
-                .addContainerGap(154, Short.MAX_VALUE))
+                                    .addComponent(btnHapusKamarD, javax.swing.GroupLayout.PREFERRED_SIZE, 78, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                .addComponent(txtTipeKamarD)))
+                        .addGroup(javax.swing.GroupLayout.Alignment.LEADING, jPanel1Layout.createSequentialGroup()
+                            .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
+                                .addGroup(javax.swing.GroupLayout.Alignment.LEADING, jPanel1Layout.createSequentialGroup()
+                                    .addComponent(jLabel7)
+                                    .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                                    .addComponent(txtCariKamarD, javax.swing.GroupLayout.PREFERRED_SIZE, 386, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                    .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                    .addComponent(btnCariKamarD))
+                                .addGroup(javax.swing.GroupLayout.Alignment.LEADING, jPanel1Layout.createSequentialGroup()
+                                    .addComponent(jLabel4)
+                                    .addGap(142, 142, 142)
+                                    .addComponent(txtIdKamarD)))
+                            .addGap(0, 0, Short.MAX_VALUE))))
+                .addGap(154, 154, 154))
         );
         jPanel1Layout.setVerticalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -430,7 +444,7 @@ public class AdminPage extends javax.swing.JFrame {
         jScrollPane3.setViewportView(tabelFasilitasUmumD);
 
         btnHapusUmumD.setBackground(new java.awt.Color(255, 0, 0));
-        btnHapusUmumD.setFont(new java.awt.Font("Tahoma", 0, 16)); // NOI18N
+        btnHapusUmumD.setFont(new java.awt.Font("Segoe UI", 1, 16)); // NOI18N
         btnHapusUmumD.setForeground(new java.awt.Color(249, 249, 249));
         btnHapusUmumD.setText("Hapus");
         btnHapusUmumD.setPreferredSize(new java.awt.Dimension(80, 35));
@@ -441,7 +455,7 @@ public class AdminPage extends javax.swing.JFrame {
         });
 
         btnTambahUmumD.setBackground(new java.awt.Color(51, 204, 0));
-        btnTambahUmumD.setFont(new java.awt.Font("Tahoma", 0, 16)); // NOI18N
+        btnTambahUmumD.setFont(new java.awt.Font("Segoe UI", 1, 16)); // NOI18N
         btnTambahUmumD.setText("Tambah");
         btnTambahUmumD.setPreferredSize(new java.awt.Dimension(80, 35));
         btnTambahUmumD.addActionListener(new java.awt.event.ActionListener() {
@@ -451,7 +465,7 @@ public class AdminPage extends javax.swing.JFrame {
         });
 
         btnEditUmumD.setBackground(new java.awt.Color(255, 153, 0));
-        btnEditUmumD.setFont(new java.awt.Font("Tahoma", 0, 16)); // NOI18N
+        btnEditUmumD.setFont(new java.awt.Font("Segoe UI", 1, 16)); // NOI18N
         btnEditUmumD.setText("Edit");
         btnEditUmumD.setPreferredSize(new java.awt.Dimension(80, 35));
         btnEditUmumD.addActionListener(new java.awt.event.ActionListener() {
@@ -460,8 +474,8 @@ public class AdminPage extends javax.swing.JFrame {
             }
         });
 
-        btnCariD.setBackground(new java.awt.Color(36, 116, 145));
-        btnCariD.setFont(new java.awt.Font("Tahoma", 0, 16)); // NOI18N
+        btnCariD.setBackground(new java.awt.Color(28, 68, 138));
+        btnCariD.setFont(new java.awt.Font("Segoe UI", 1, 16)); // NOI18N
         btnCariD.setForeground(new java.awt.Color(255, 255, 255));
         btnCariD.setText("Cari");
         btnCariD.setPreferredSize(new java.awt.Dimension(51, 35));
@@ -472,6 +486,7 @@ public class AdminPage extends javax.swing.JFrame {
         });
 
         txtCariUmumD.setFont(new java.awt.Font("Tahoma", 0, 16)); // NOI18N
+        txtCariUmumD.setForeground(new java.awt.Color(28, 68, 138));
         txtCariUmumD.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
                 txtCariUmumDMouseClicked(evt);
@@ -484,25 +499,32 @@ public class AdminPage extends javax.swing.JFrame {
         });
 
         jLabel1.setFont(new java.awt.Font("Segoe UI Semibold", 0, 16)); // NOI18N
+        jLabel1.setForeground(new java.awt.Color(28, 68, 138));
         jLabel1.setText("Cari berdasarkan fasilitas &  ID");
 
-        jLabel2.setFont(new java.awt.Font("Segoe UI Semibold", 0, 16)); // NOI18N
+        jLabel2.setFont(new java.awt.Font("Segoe UI", 0, 16)); // NOI18N
+        jLabel2.setForeground(new java.awt.Color(28, 68, 138));
         jLabel2.setText("ID");
 
         txtIdUmumD.setEditable(false);
-        txtIdUmumD.setFont(new java.awt.Font("Tahoma", 0, 16)); // NOI18N
+        txtIdUmumD.setFont(new java.awt.Font("Segoe UI", 0, 16)); // NOI18N
+        txtIdUmumD.setForeground(new java.awt.Color(28, 68, 138));
         txtIdUmumD.setPreferredSize(new java.awt.Dimension(6, 35));
 
-        jLabel3.setFont(new java.awt.Font("Segoe UI Semibold", 0, 16)); // NOI18N
+        jLabel3.setFont(new java.awt.Font("Segoe UI", 0, 16)); // NOI18N
+        jLabel3.setForeground(new java.awt.Color(28, 68, 138));
         jLabel3.setText("Fasilitas");
 
-        txtFasilitasUmumD.setFont(new java.awt.Font("Tahoma", 0, 16)); // NOI18N
+        txtFasilitasUmumD.setFont(new java.awt.Font("Segoe UI", 0, 16)); // NOI18N
+        txtFasilitasUmumD.setForeground(new java.awt.Color(28, 68, 138));
         txtFasilitasUmumD.setPreferredSize(new java.awt.Dimension(6, 35));
 
-        txtWelcome1.setFont(new java.awt.Font("Dialog", 1, 18)); // NOI18N
-        txtWelcome1.setText("Selamat datang,");
+        txtWelcome1.setFont(new java.awt.Font("Segoe UI Semibold", 1, 22)); // NOI18N
+        txtWelcome1.setForeground(new java.awt.Color(28, 68, 138));
+        txtWelcome1.setText("Selamat datang");
 
-        txtWelcomee2.setFont(new java.awt.Font("Dialog", 1, 18)); // NOI18N
+        txtWelcomee2.setFont(new java.awt.Font("Segoe UI Semibold", 1, 22)); // NOI18N
+        txtWelcomee2.setForeground(new java.awt.Color(28, 68, 138));
         txtWelcomee2.setText("username");
 
         javax.swing.GroupLayout jPanel2Layout = new javax.swing.GroupLayout(jPanel2);
@@ -510,73 +532,77 @@ public class AdminPage extends javax.swing.JFrame {
         jPanel2Layout.setHorizontalGroup(
             jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel2Layout.createSequentialGroup()
-                .addContainerGap()
+                .addGap(27, 27, 27)
                 .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(jPanel2Layout.createSequentialGroup()
-                        .addComponent(btnTambahUmumD, javax.swing.GroupLayout.PREFERRED_SIZE, 90, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(70, 70, 70)
+                        .addComponent(btnTambahUmumD, javax.swing.GroupLayout.PREFERRED_SIZE, 98, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(47, 47, 47)
                         .addComponent(btnEditUmumD, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                        .addComponent(btnHapusUmumD, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel2Layout.createSequentialGroup()
+                        .addComponent(btnHapusUmumD, javax.swing.GroupLayout.PREFERRED_SIZE, 92, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addGroup(jPanel2Layout.createSequentialGroup()
                         .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addComponent(jLabel3)
                             .addComponent(jLabel2))
-                        .addGap(104, 104, 104)
+                        .addGap(89, 89, 89)
                         .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addComponent(txtFasilitasUmumD, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                             .addComponent(txtIdUmumD, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))
-                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel2Layout.createSequentialGroup()
-                        .addGap(0, 0, Short.MAX_VALUE)
-                        .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                            .addComponent(txtWelcome1)
-                            .addComponent(txtWelcomee2)
-                            .addGroup(jPanel2Layout.createSequentialGroup()
-                                .addComponent(jLabel1)
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                                .addComponent(txtCariUmumD, javax.swing.GroupLayout.PREFERRED_SIZE, 460, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                                .addComponent(btnCariD, javax.swing.GroupLayout.PREFERRED_SIZE, 67, javax.swing.GroupLayout.PREFERRED_SIZE))
-                            .addComponent(jScrollPane3))))
-                .addGap(120, 120, 120))
+                    .addGroup(jPanel2Layout.createSequentialGroup()
+                        .addComponent(txtWelcome1)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(txtWelcomee2))
+                    .addGroup(jPanel2Layout.createSequentialGroup()
+                        .addComponent(jLabel1)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                        .addComponent(txtCariUmumD, javax.swing.GroupLayout.PREFERRED_SIZE, 460, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                        .addComponent(btnCariD, javax.swing.GroupLayout.PREFERRED_SIZE, 67, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(jScrollPane3, javax.swing.GroupLayout.PREFERRED_SIZE, 775, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(205, 205, 205))
         );
         jPanel2Layout.setVerticalGroup(
             jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel2Layout.createSequentialGroup()
-                .addContainerGap()
-                .addComponent(txtWelcome1)
-                .addGap(1, 1, 1)
-                .addComponent(txtWelcomee2)
-                .addGap(18, 18, 18)
+                .addGap(21, 21, 21)
                 .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(btnCariD, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(txtWelcome1)
+                    .addComponent(txtWelcomee2))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jLabel1)
                     .addComponent(txtCariUmumD, javax.swing.GroupLayout.PREFERRED_SIZE, 35, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jLabel1))
+                    .addComponent(btnCariD, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addComponent(jScrollPane3, javax.swing.GroupLayout.PREFERRED_SIZE, 262, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(18, 18, 18)
                 .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(jPanel2Layout.createSequentialGroup()
-                        .addGap(7, 7, 7)
-                        .addComponent(jLabel2))
-                    .addGroup(jPanel2Layout.createSequentialGroup()
                         .addComponent(txtIdUmumD, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addGap(18, 18, 18)
+                        .addComponent(txtFasilitasUmumD, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(jLabel2)
+                    .addGroup(jPanel2Layout.createSequentialGroup()
+                        .addGap(46, 46, 46)
+                        .addComponent(jLabel3)))
+                .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(jPanel2Layout.createSequentialGroup()
+                        .addGap(35, 35, 35)
                         .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                            .addComponent(txtFasilitasUmumD, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(jLabel3))))
-                .addGap(35, 35, 35)
-                .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(btnTambahUmumD, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(btnEditUmumD, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(btnHapusUmumD, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addContainerGap(349, Short.MAX_VALUE))
+                            .addComponent(btnTambahUmumD, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(btnEditUmumD, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                    .addGroup(jPanel2Layout.createSequentialGroup()
+                        .addGap(27, 27, 27)
+                        .addComponent(btnHapusUmumD, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                .addContainerGap(388, Short.MAX_VALUE))
         );
 
         jTabbedPane1.addTab("Data Fasilitas Umum", jPanel2);
 
+        jPanel3.setBackground(new java.awt.Color(255, 255, 255));
+
         jButton1.setBackground(new java.awt.Color(255, 0, 0));
-        jButton1.setFont(new java.awt.Font("Segoe UI Semibold", 0, 14)); // NOI18N
+        jButton1.setFont(new java.awt.Font("Segoe UI", 1, 15)); // NOI18N
         jButton1.setForeground(new java.awt.Color(255, 255, 255));
         jButton1.setText("Kembali ke Login");
         jButton1.addActionListener(new java.awt.event.ActionListener() {
@@ -590,16 +616,16 @@ public class AdminPage extends javax.swing.JFrame {
         jPanel3Layout.setHorizontalGroup(
             jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel3Layout.createSequentialGroup()
-                .addContainerGap(326, Short.MAX_VALUE)
+                .addGap(348, 348, 348)
                 .addComponent(jButton1)
-                .addContainerGap(466, Short.MAX_VALUE))
+                .addContainerGap(505, Short.MAX_VALUE))
         );
         jPanel3Layout.setVerticalGroup(
             jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel3Layout.createSequentialGroup()
                 .addGap(35, 35, 35)
-                .addComponent(jButton1, javax.swing.GroupLayout.PREFERRED_SIZE, 39, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(837, Short.MAX_VALUE))
+                .addComponent(jButton1, javax.swing.GroupLayout.PREFERRED_SIZE, 43, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(859, Short.MAX_VALUE))
         );
 
         jTabbedPane1.addTab("Kembali Login", jPanel3);
@@ -610,7 +636,7 @@ public class AdminPage extends javax.swing.JFrame {
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 820, javax.swing.GroupLayout.PREFERRED_SIZE)
+            .addComponent(jScrollPane1, javax.swing.GroupLayout.DEFAULT_SIZE, 848, Short.MAX_VALUE)
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)

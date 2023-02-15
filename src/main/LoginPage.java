@@ -112,11 +112,11 @@ public class LoginPage extends javax.swing.JFrame {
 
         jPanel1.setBackground(new java.awt.Color(255, 255, 255));
 
-        txtUsernameD.setFont(new java.awt.Font("Tahoma", 0, 16)); // NOI18N
-        txtUsernameD.setForeground(new java.awt.Color(31, 79, 97));
+        txtUsernameD.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
+        txtUsernameD.setForeground(new java.awt.Color(1, 1, 60));
         txtUsernameD.setPreferredSize(new java.awt.Dimension(150, 35));
 
-        btnLoginD.setBackground(new java.awt.Color(36, 116, 145));
+        btnLoginD.setBackground(new java.awt.Color(28, 68, 138));
         btnLoginD.setFont(new java.awt.Font("Segoe UI", 1, 15)); // NOI18N
         btnLoginD.setForeground(new java.awt.Color(243, 242, 242));
         btnLoginD.setText("Login");
@@ -126,16 +126,16 @@ public class LoginPage extends javax.swing.JFrame {
             }
         });
 
-        jLabel1.setFont(new java.awt.Font("Franklin Gothic Book", 1, 16)); // NOI18N
-        jLabel1.setForeground(new java.awt.Color(36, 116, 145));
+        jLabel1.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
+        jLabel1.setForeground(new java.awt.Color(28, 68, 138));
         jLabel1.setText("Password");
 
-        jLabel2.setFont(new java.awt.Font("Segoe UI", 1, 24)); // NOI18N
-        jLabel2.setForeground(new java.awt.Color(36, 116, 145));
+        jLabel2.setFont(new java.awt.Font("Segoe UI Black", 0, 36)); // NOI18N
+        jLabel2.setForeground(new java.awt.Color(28, 68, 138));
         jLabel2.setText("Login RizHotel");
 
-        jLabel3.setFont(new java.awt.Font("Franklin Gothic Book", 1, 16)); // NOI18N
-        jLabel3.setForeground(new java.awt.Color(36, 116, 145));
+        jLabel3.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
+        jLabel3.setForeground(new java.awt.Color(28, 68, 138));
         jLabel3.setText("Username");
 
         jLabel5.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imgs/logout_rounded_left_32px.png"))); // NOI18N
@@ -145,8 +145,8 @@ public class LoginPage extends javax.swing.JFrame {
             }
         });
 
-        jLabel4.setFont(new java.awt.Font("Franklin Gothic Book", 1, 13)); // NOI18N
-        jLabel4.setForeground(new java.awt.Color(36, 116, 145));
+        jLabel4.setFont(new java.awt.Font("Segoe UI Semibold", 1, 13)); // NOI18N
+        jLabel4.setForeground(new java.awt.Color(28, 68, 138));
         jLabel4.setText("Belum punya akun? Register");
         jLabel4.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
@@ -154,7 +154,8 @@ public class LoginPage extends javax.swing.JFrame {
             }
         });
 
-        txtPasswordD.setFont(new java.awt.Font("Tahoma", 0, 16)); // NOI18N
+        txtPasswordD.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
+        txtPasswordD.setForeground(new java.awt.Color(1, 1, 60));
         txtPasswordD.addKeyListener(new java.awt.event.KeyAdapter() {
             public void keyPressed(java.awt.event.KeyEvent evt) {
                 txtPasswordDKeyPressed(evt);
@@ -163,7 +164,9 @@ public class LoginPage extends javax.swing.JFrame {
 
         checkBoxShowHidePwd.setBackground(new java.awt.Color(255, 255, 255));
         checkBoxShowHidePwd.setFont(new java.awt.Font("Segoe UI Semibold", 1, 13)); // NOI18N
+        checkBoxShowHidePwd.setForeground(new java.awt.Color(28, 68, 138));
         checkBoxShowHidePwd.setText("Show password");
+        checkBoxShowHidePwd.setPreferredSize(new java.awt.Dimension(122, 26));
         checkBoxShowHidePwd.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 checkBoxShowHidePwdActionPerformed(evt);
@@ -191,14 +194,14 @@ public class LoginPage extends javax.swing.JFrame {
                             .addComponent(btnLoginD, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                             .addGroup(jPanel1Layout.createSequentialGroup()
                                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                    .addComponent(jLabel1)
-                                    .addComponent(jLabel3))
+                                    .addComponent(jLabel3)
+                                    .addComponent(jLabel1))
                                 .addGap(18, 18, 18)
                                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                                     .addComponent(txtPasswordD)
-                                    .addComponent(txtUsernameD, javax.swing.GroupLayout.DEFAULT_SIZE, 325, Short.MAX_VALUE)
+                                    .addComponent(txtUsernameD, javax.swing.GroupLayout.DEFAULT_SIZE, 322, Short.MAX_VALUE)
                                     .addGroup(jPanel1Layout.createSequentialGroup()
-                                        .addComponent(checkBoxShowHidePwd, javax.swing.GroupLayout.PREFERRED_SIZE, 121, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                        .addComponent(checkBoxShowHidePwd, javax.swing.GroupLayout.PREFERRED_SIZE, 122, javax.swing.GroupLayout.PREFERRED_SIZE)
                                         .addGap(0, 0, Short.MAX_VALUE))))
                             .addGroup(jPanel1Layout.createSequentialGroup()
                                 .addComponent(jLabel2)
@@ -217,15 +220,15 @@ public class LoginPage extends javax.swing.JFrame {
                 .addComponent(jLabel2)
                 .addGap(28, 28, 28)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(txtUsernameD, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(txtUsernameD, javax.swing.GroupLayout.PREFERRED_SIZE, 41, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(jLabel3))
-                .addGap(18, 18, 18)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(txtPasswordD, javax.swing.GroupLayout.PREFERRED_SIZE, 36, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(txtPasswordD, javax.swing.GroupLayout.DEFAULT_SIZE, 42, Short.MAX_VALUE)
                     .addComponent(jLabel1))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addComponent(checkBoxShowHidePwd)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 5, Short.MAX_VALUE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(checkBoxShowHidePwd, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(jLabel4)
                 .addGap(13, 13, 13)
                 .addComponent(btnLoginD, javax.swing.GroupLayout.PREFERRED_SIZE, 44, javax.swing.GroupLayout.PREFERRED_SIZE)
