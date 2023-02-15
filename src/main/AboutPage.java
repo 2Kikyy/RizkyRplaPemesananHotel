@@ -30,6 +30,9 @@ public class AboutPage extends javax.swing.JFrame {
         initComponents();
         
         resizeImage();
+        
+        // set app window name
+        this.setTitle("RizHotel v1.0");
     }
 
     public void resizeImage() {
