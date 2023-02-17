@@ -418,13 +418,11 @@ public class GuestPage extends javax.swing.JFrame {
         btnKonfirmasiPesanan = new javax.swing.JButton();
         jButton1 = new javax.swing.JButton();
         btnKeluar2 = new javax.swing.JButton();
-        jButton3 = new javax.swing.JButton();
         jScrollPane3 = new javax.swing.JScrollPane();
         jPanel3 = new javax.swing.JPanel();
         jScrollPane4 = new javax.swing.JScrollPane();
         tabelBuktiPemesanan = new javax.swing.JTable();
         btnCetak = new javax.swing.JButton();
-        btnKeluar3 = new javax.swing.JButton();
         txtwelcome1 = new javax.swing.JLabel();
         txtWelcome4 = new javax.swing.JLabel();
         jLabel13 = new javax.swing.JLabel();
@@ -834,12 +832,6 @@ public class GuestPage extends javax.swing.JFrame {
             }
         });
 
-        jButton3.setBackground(new java.awt.Color(255, 0, 0));
-        jButton3.setFont(new java.awt.Font("Segoe UI", 1, 15)); // NOI18N
-        jButton3.setForeground(new java.awt.Color(255, 255, 255));
-        jButton3.setText("Keluar");
-        jButton3.setPreferredSize(new java.awt.Dimension(73, 35));
-
         javax.swing.GroupLayout jPanel2Layout = new javax.swing.GroupLayout(jPanel2);
         jPanel2.setLayout(jPanel2Layout);
         jPanel2Layout.setHorizontalGroup(
@@ -849,16 +841,15 @@ public class GuestPage extends javax.swing.JFrame {
                     .addGroup(jPanel2Layout.createSequentialGroup()
                         .addGap(810, 810, 810)
                         .addComponent(btnKeluar2))
-                    .addGroup(jPanel2Layout.createSequentialGroup()
-                        .addGap(20, 20, 20)
-                        .addComponent(btnKonfirmasiPesanan, javax.swing.GroupLayout.PREFERRED_SIZE, 174, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(265, 265, 265)
-                        .addComponent(jButton1, javax.swing.GroupLayout.PREFERRED_SIZE, 92, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(290, 290, 290)
-                        .addComponent(jButton3, javax.swing.GroupLayout.PREFERRED_SIZE, 86, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addGroup(jPanel2Layout.createSequentialGroup()
-                        .addGap(29, 29, 29)
-                        .addComponent(jPanel4, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                    .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
+                        .addGroup(javax.swing.GroupLayout.Alignment.LEADING, jPanel2Layout.createSequentialGroup()
+                            .addGap(20, 20, 20)
+                            .addComponent(btnKonfirmasiPesanan, javax.swing.GroupLayout.PREFERRED_SIZE, 174, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                            .addComponent(jButton1, javax.swing.GroupLayout.PREFERRED_SIZE, 92, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addGroup(javax.swing.GroupLayout.Alignment.LEADING, jPanel2Layout.createSequentialGroup()
+                            .addGap(29, 29, 29)
+                            .addComponent(jPanel4, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))))
                 .addContainerGap(2106, Short.MAX_VALUE))
         );
         jPanel2Layout.setVerticalGroup(
@@ -869,8 +860,7 @@ public class GuestPage extends javax.swing.JFrame {
                 .addGap(81, 81, 81)
                 .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(btnKonfirmasiPesanan, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jButton1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jButton3, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                    .addComponent(jButton1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(1170, 1170, 1170)
                 .addComponent(btnKeluar2)
                 .addContainerGap(1170, Short.MAX_VALUE))
@@ -918,17 +908,6 @@ public class GuestPage extends javax.swing.JFrame {
             }
         });
 
-        btnKeluar3.setBackground(new java.awt.Color(255, 0, 0));
-        btnKeluar3.setFont(new java.awt.Font("Segoe UI", 1, 15)); // NOI18N
-        btnKeluar3.setForeground(new java.awt.Color(255, 255, 255));
-        btnKeluar3.setText("Keluar");
-        btnKeluar3.setPreferredSize(new java.awt.Dimension(73, 35));
-        btnKeluar3.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                btnKeluar3ActionPerformed(evt);
-            }
-        });
-
         txtwelcome1.setFont(new java.awt.Font("Dialog", 1, 18)); // NOI18N
         txtwelcome1.setForeground(new java.awt.Color(235, 235, 235));
         txtwelcome1.setText("Selamat datang,");
@@ -957,8 +936,7 @@ public class GuestPage extends javax.swing.JFrame {
                         .addGroup(jPanel3Layout.createSequentialGroup()
                             .addGap(282, 282, 282)
                             .addComponent(jLabel20)
-                            .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                            .addComponent(btnKeluar3, javax.swing.GroupLayout.PREFERRED_SIZE, 86, javax.swing.GroupLayout.PREFERRED_SIZE))
+                            .addGap(0, 0, Short.MAX_VALUE))
                         .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel3Layout.createSequentialGroup()
                             .addGap(30, 30, 30)
                             .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -982,7 +960,6 @@ public class GuestPage extends javax.swing.JFrame {
                 .addComponent(jScrollPane4, javax.swing.GroupLayout.PREFERRED_SIZE, 283, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(btnKeluar3, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(btnCetak, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(jLabel20))
                 .addContainerGap(2612, Short.MAX_VALUE))
@@ -1119,10 +1096,6 @@ public class GuestPage extends javax.swing.JFrame {
         dispose();
     }//GEN-LAST:event_btnKeluar2ActionPerformed
 
-    private void btnKeluar3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnKeluar3ActionPerformed
-        dispose();
-    }//GEN-LAST:event_btnKeluar3ActionPerformed
-
     private void btnCetakActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnCetakActionPerformed
         printPdfBuktiPemesanan();
     }//GEN-LAST:event_btnCetakActionPerformed
@@ -1208,13 +1181,11 @@ public class GuestPage extends javax.swing.JFrame {
     private javax.swing.JButton btnCetak;
     private javax.swing.JButton btnKeluar;
     private javax.swing.JButton btnKeluar2;
-    private javax.swing.JButton btnKeluar3;
     private javax.swing.JButton btnKonfirmasiPesanan;
     private javax.swing.JComboBox comboBoxTipeKamar;
     private javax.swing.JTextField hargaKamarDipilih;
     private javax.swing.JButton jButton1;
     private javax.swing.JButton jButton2;
-    private javax.swing.JButton jButton3;
     private javax.swing.JButton jButton4;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel10;

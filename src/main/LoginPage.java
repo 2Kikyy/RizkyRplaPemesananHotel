@@ -79,7 +79,7 @@ public class LoginPage extends javax.swing.JFrame {
                         setVisible(false);
                     }
                 } else {
-                    JOptionPane.showMessageDialog(rootPane, "Usrname atau Password Salah", "Login Error", 1);
+                    JOptionPane.showMessageDialog(rootPane, "Username atau Password Salah", "Login Error", 1);
                 }
             } catch (Exception e) {
                 System.out.println("" + e);
